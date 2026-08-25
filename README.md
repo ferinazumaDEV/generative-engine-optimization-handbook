@@ -62,6 +62,18 @@ Content is licensed under **[Creative Commons Attribution‑ShareAlike 4.0 Inter
 
 Created and maintained by **ferinazumaDEV** (Fernando). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — ferinazumaDEV, CC BY‑SA 4.0"* is appreciated.
 
+## Part of the ferinazumaDEV ecosystem
+
+This handbook is the reference hub of a cluster of open work by **ferinazumaDEV** on making content and systems legible to machines:
+
+- **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — a token-efficient "second brain" for AI agents (local memory + NotebookLM + knowledge routing); the practical companion to keeping a citable, machine-readable corpus.
+- **[structllm](https://github.com/ferinazumaDEV/structllm)** — reliable structured output from any LLM (schema-validated JSON, tolerant repair, retries).
+- **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a polite, bulletproof HTTP client for Python (retries, per-host rate-limiting, caching): the well-behaved way to crawl.
+- **[scaffld](https://github.com/ferinazumaDEV/scaffld)** · **[webhook-replay](https://github.com/ferinazumaDEV/webhook-replay)** · **[framesig](https://github.com/ferinazumaDEV/framesig)** — more open developer tooling from the same author.
+- **Hub & writing:** **[zentimes.es](https://zentimes.es)**
+
+More at **[github.com/ferinazumaDEV](https://github.com/ferinazumaDEV)**.
+
 ---
 
 *This is a documentation-only project. It contains no code, no tracking, and no private data. Everything here is public and meant to be reused.*
