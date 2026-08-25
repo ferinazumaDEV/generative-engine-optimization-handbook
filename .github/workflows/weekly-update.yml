@@ -1,0 +1,30 @@
+name: Weekly update reminder
+
+# Opens a dated checklist issue every Monday so the weekly cadence never slips.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Mondays 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  open-issue:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Open (or skip) this week's update issue
+        run: |
+          set -euo pipefail
+          WEEK="$(date -u +%G-W%V)"
+          TITLE="Weekly GEO update — $WEEK"
+          if gh issue list --repo "$GITHUB_REPOSITORY" --state all --search "$TITLE in:title" \
+               --json title --jq '.[].title' | grep -qxF "$TITLE"; then
+            echo "Issue for $WEEK already exists — nothing to do."
+            exit 0
+          fi
+          BODY=$'Weekly cadence checklist (see `updates/README.md`):\n\n- [ ] Scan what changed in the GEO landscape this week (engines, citation behavior, new controls).\n- [ ] Add a dated log entry under `updates/` (e.g. `updates/'"$WEEK"'.md`).\n- [ ] Update any chapter whose facts moved — keep every claim cited.\n- [ ] Review open PRs & issues (new techniques, corrections).\n- [ ] Bump `CHANGELOG.md` if there was a notable change.\n\n_Opened automatically to keep the weekly rhythm._'
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --label weekly-update --body "$BODY"
