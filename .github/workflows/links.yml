@@ -29,6 +29,5 @@ jobs:
             --max-concurrency 4
             --max-retries 2
             --accept 200,201,204,206,403,429
-            --exclude example\.com
             './**/*.md'
           fail: true

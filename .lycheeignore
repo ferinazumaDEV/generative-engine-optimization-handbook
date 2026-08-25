@@ -1,0 +1,10 @@
+# Links that resolve fine for a human browser but trip the automated checker
+# (anti-bot blocks, HTTP/2 quirks, aggressive rate-limiting). One regex per line.
+# If you add one here, verify by hand that it really works, and note why.
+
+# RFC 2606 example domain — used in illustrative snippets, 404 by design.
+example\.com
+
+# BusinessWire press releases: server negotiates HTTP/2 badly and lychee errors
+# out on the connection. The URL is reachable in a normal browser.
+businesswire\.com
