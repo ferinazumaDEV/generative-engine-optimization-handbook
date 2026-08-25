@@ -181,7 +181,7 @@ Notes and caveats for this layer:
 
 ### Referral *quality* — real signal, noisy numbers
 
-A consistent finding across 2026 vendor studies is that AI-referred visitors **convert at a higher rate** than generic organic, because the engine pre-qualifies them (they read a synthesized answer and *chose* to click through). Reported multipliers are all over the map — Semrush cites ~**4.4×**, others report anywhere from ~1.3× to double-digit multiples ([RunMarshal, 2026](https://www.runmarshal.com/field-notes/ai-search-traffic-is-4x-more-valuable-than-organic); [AirOps, 2026](https://www.airops.com/blog/ai-referral-traffic-conversion-rates); [Averi, 2026](https://www.averi.ai/blog/ai-search-visitors-convert-23x-higher.-everyone-s-ignoring-it.)).
+A consistent finding across 2026 vendor studies is that AI-referred visitors **convert at a higher rate** than generic organic, because the engine pre-qualifies them (they read a synthesized answer and *chose* to click through). Reported multipliers are all over the map — Semrush cites ~**4.4×**, others report anywhere from ~1.3× to ~4× ([RunMarshal, 2026](https://www.runmarshal.com/field-notes/ai-search-traffic-is-4x-more-valuable-than-organic); [AirOps, 2026](https://www.airops.com/blog/ai-referral-traffic-conversion-rates)).
 
 > **Read these skeptically.** They are mostly **vendor-published, self-selected, and inconsistently defined** (different attribution windows, "conversion" definitions, and the Direct-leakage problem above cutting both ways). The *directional* claim — AI referrals are higher-intent than average organic — is plausible and widely repeated. The *specific multiplier* is not a fact; measure it on your own funnel before quoting a number. `⚠️ needs independent verification; do not cite a specific ×-figure as settled.`
 
@@ -346,8 +346,6 @@ Referral-quality studies (vendor-published — treat as directional, not definit
 
 - RunMarshal — *AI Search Traffic is 4x More Valuable than Organic*: [runmarshal.com](https://www.runmarshal.com/field-notes/ai-search-traffic-is-4x-more-valuable-than-organic)
 - AirOps — *AI Referral Traffic vs Organic: Conversion Rates*: [airops.com](https://www.airops.com/blog/ai-referral-traffic-conversion-rates)
-- Averi — *AI Search Visitors Convert Higher*: [averi.ai](https://www.averi.ai/blog/ai-search-visitors-convert-23x-higher.-everyone-s-ignoring-it.)
-
 Tool landscape (vendor/affiliate roundups — cross-check specifics on vendor sites):
 
 - Semrush — *Best GEO Tools*: [semrush.com](https://www.semrush.com/blog/best-generative-engine-optimization-tools/)

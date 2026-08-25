@@ -18,7 +18,7 @@ Copy this into a new `YYYY-Www.md`:
 # YYYY-Www (Mon DD – Sun DD, YYYY)
 
 ## What's new in GEO
-- **[Area] Headline.** One or two sentences, present tense. ([Source](https://…))
+- **[Area] Headline.** One or two sentences, present tense. ([Source](URL))
   - Why it matters for GEO practitioners.
 
 ## What changed in this repo
