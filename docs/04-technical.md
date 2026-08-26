@@ -203,6 +203,8 @@ curl -sL https://example.com/your-page | grep -i "a distinctive phrase from your
 
 Or in the browser: **View Source** (not "Inspect" — Inspect shows the *rendered* DOM, which hides the problem). If the content isn't in View Source, it isn't in what most AI crawlers receive.
 
+> **▶ Reproducible example.** The cookbook has a runnable before/after for this exact fix — a client-rendered page vs a server-rendered one with the *same* article, measured at **6 words visible to a no-JS crawler vs 152 (~25×)**. Clone it and run `reproduce.sh`: [`04-technical/ssr-vs-csr-rendering`](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook/tree/main/04-technical/ssr-vs-csr-rendering).
+
 ### Extractability: the main content must be liftable
 
 Even with server-rendered HTML, help the extractor separate signal from chrome:
