@@ -132,6 +132,8 @@ This is the risk with no clean classic-SEO analogue, and the one most likely to 
 
 **What honest operators do:** treat prompt injection as a **security problem, not a growth tactic.** Do not embed hidden instructions in your own pages "to help the AI" — it's indistinguishable from an attack, it will be filtered or penalized, and it teaches your infrastructure the wrong pattern. Follow the [OWASP guidance](https://genai.owasp.org/llm-top-10/) on your own properties.
 
+> **Defend it as an engineer.** Prompt injection is covered as a hands-on security problem — the *lethal trifecta*, indirect injection via RAG/tools, and why prompt-level defenses fail while architecture-level ones work — in the companion reference **[Evidence-Based Prompt Engineering → Security](https://github.com/ferinazumaDEV/prompt-engineering-evidence/blob/main/docs/05-security.md)**.
+
 ### Risk 4: Content pollution and model collapse — poisoning the well
 
 The cheapest GEO tactic is also the most corrosive to the whole ecosystem: **flood the web with AI-generated pages to blanket every query.** At scale, this backfires on everyone, provably.
