@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "The GEO Handbook"
+message: "If you use this handbook, please cite it."
+type: dataset
+authors:
+  - family-names: "Aporta Franco"
+    given-names: "Fernando"
+    alias: ferinazumaDEV
+abstract: >-
+  A comprehensive, primary-sourced reference on Generative Engine Optimization
+  (GEO): structuring, writing, and publishing content so it is understood,
+  trusted, and cited by generative AI answer engines.
+repository-code: "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook"
+url: "https://zentimes.es"
+license: CC-BY-SA-4.0
+version: "0.1.0"
+keywords:
+  - generative engine optimization
+  - GEO
+  - AI search
+  - answer engines
+  - LLM citation

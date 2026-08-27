@@ -1,0 +1,26 @@
+# The GEO Handbook
+
+> Everything about Generative Engine Optimization (GEO) in one place: how to structure, write, and publish content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) understand, trust, and cite it. Every claim carries a primary source. Maintained by ferinazumaDEV.
+
+## Start here
+- [Foundations — what GEO is and where to start](docs/01-foundations.md): definitions, first principles, the KDD 2024 paper.
+- [Engines — how AI answer engines work](docs/02-engines.md): retrieval, ranking, and citation in generative search.
+
+## Core chapters
+- [Content](docs/03-content.md): writing and structuring for extraction and citation.
+- [Technical](docs/04-technical.md): rendering, crawlability, structured data, llms.txt.
+- [Authority](docs/05-authority.md): E-E-A-T, entities, and trust signals machines can read.
+- [Measurement](docs/06-measurement.md): how to measure citation share and AI visibility.
+- [Research & cases](docs/07-research-cases.md): the primary studies and what they found.
+- [Future & ethics](docs/08-future-ethics.md): where GEO is going and the guardrails.
+- [Glossary](docs/09-glossary.md): the vocabulary of GEO.
+
+## Meta
+- [README](README.md): what this is and how it's sourced.
+- [Contributing](CONTRIBUTING.md): the cite-or-flag rule for every claim.
+- [Changelog](CHANGELOG.md): versioned history.
+
+## Related
+- [Evidence-based prompt engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence): the input side — graded, sourced techniques.
+- [The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook): runnable before/after demos of these techniques.
+- Hub: https://zentimes.es

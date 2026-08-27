@@ -34,7 +34,7 @@ This handbook is a **free, public, community-maintained reference** on how gener
 | 08 | [Future & Ethics](docs/08-future-ethics.md) | Where GEO is heading, prompt/answer manipulation risks, disclosure, and doing this responsibly |
 | 09 | [Glossary](docs/09-glossary.md) | Plain-language definitions of every term used across the handbook |
 
-> All nine chapters are written and cited (500+ sources). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
+> All nine chapters are written and cited (100+ primary sources, cited throughout). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
 
 ---
 

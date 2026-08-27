@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zentimes.es/#ferinazumaDEV",
+      "name": "Fernando Aporta Franco",
+      "alternateName": "ferinazumaDEV",
+      "url": "https://zentimes.es",
+      "sameAs": [
+        "https://github.com/ferinazumaDEV",
+        "https://zentimes.es"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook#work",
+      "name": "The GEO Handbook",
+      "headline": "Everything about Generative Engine Optimization, in one place",
+      "about": "Generative Engine Optimization",
+      "author": { "@id": "https://zentimes.es/#ferinazumaDEV" },
+      "creator": { "@id": "https://zentimes.es/#ferinazumaDEV" },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "codeRepository": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
+      "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
+      "inLanguage": "en",
+      "keywords": ["generative engine optimization", "GEO", "AI search", "answer engines", "LLM citation"],
+      "isBasedOn": "https://arxiv.org/abs/2311.09735"
+    }
+  ]
+}
