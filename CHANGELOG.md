@@ -6,8 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-- First weekly landscape entry in `updates/` (what changed in the GEO ecosystem this week).
-- Ongoing: expand the case studies and keep every engine's citation behavior current.
+### Added
+
+- **First weekly landscape entry: [`updates/2026-W36.md`](updates/2026-W36.md)** — the busy late-August 2026 GEO week: Google's embeddable **Preferred Sources** button + **AI Mode link carousels**, **ChatGPT ads** live across the EU, the **IETF AIPREF** `Content-Usage`/`train-ai`-vs-`search` drafts, **Cloudflare's 15 Sep** ad-page crawler default, and fresh citation/traffic studies (DA&lt;40 sources, cited≠recommended, the SIGIR 252k-trial paper).
+
+### Changed
+
+- `04 · Technical GEO`: added the **IETF AIPREF** standardization (`train-ai` vs `search`; the `Content-Usage` HTTP header and `robots.txt` rule) and **Cloudflare's 15 Sep 2026** default block of training/agent crawlers on ad-bearing pages.
+- `02 · The Engines`: added Google's embeddable **Preferred Sources** button and **AI Mode link carousels** to the Google publisher-controls profile.
+- `07 · Research & Case Studies`: added the **SIGIR 2026 "What Gets Cited"** controlled-factorial study (252k trials; relevance + list position win, formatting barely helps) to Part 2.
+
+### Ongoing
+
+- Expand the case studies and keep every engine's citation behavior current.
 
 ## [0.1.0] — 2026-08-25
 

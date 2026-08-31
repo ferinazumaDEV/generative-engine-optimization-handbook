@@ -165,6 +165,16 @@ Beyond the founding paper, the *peer-reviewed* literature specifically on GEO is
 1. **Source order, product name, and document content all shift which sources an engine favors** — confirming, from the attacker's side, that on-page signals causally change AI visibility.
 2. **The same mechanism that GEO uses for good can be abused.** This is why **[08 · Future & Ethics](08-future-ethics.md)** treats prompt/answer manipulation as a real risk, not a growth hack — and why engines are actively hardening against injected content.
 
+### The controlled-factorial angle: which on-page factors actually win a citation
+
+**Tier 1 — Demonstrated (controlled).** *What Gets Cited: Competitive GEO in AI Answer Engines* (Vishwakarma, Kumar, Jamidar — **SIGIR 2026**, [arXiv:2605.25517](https://arxiv.org/abs/2605.25517)) is the most rigorous causal-style evidence to date on *which single content factor* earns a citation. Using a brand-anonymized, order-counterbalanced two-document RAG testbed, the authors ran **~252,000 trials across six LLMs and 18 content factors**, measuring which source receives the *first* citation marker:
+
+- **Topical relevance and list position are the biggest drivers** of being cited first.
+- **Explicit price information and a recent timestamp help consistently**; completeness and trust signals help modestly.
+- **Formatting-only edits have little impact** — a caution against cosmetic "GEO tweaks."
+
+Because it manipulates factors under controlled counterbalancing rather than observing correlations in the wild, it sits in Tier 1 alongside the adversarial work — and it independently echoes the industry finding that *relevance and freshness*, not surface formatting, move citations (see Part 3).
+
 ### Why some sources dominate: the training-corpus papers
 
 **Tier 4 — Documented.** GEO doesn't only happen at retrieval time; part of "authority" is baked in when a model is *trained*. Three primary sources explain why Wikipedia and Reddit punch above their weight (the full argument lives in **[05 · Authority & Trust](05-authority.md)**):
@@ -175,7 +185,7 @@ Beyond the founding paper, the *peer-reviewed* literature specifically on GEO is
 
 ### An honest note on the state of the literature
 
-> The academic GEO canon in 2026 is roughly: **one founding optimization paper, one adversarial-manipulation paper, and a supporting cast of training-corpus and retrieval papers.** Everything else claiming to be "GEO research" — the studies in Part 3 — is **industry work**: valuable for scale, weaker for method, and usually run by a company selling a related product. Weight accordingly. If you know of a peer-reviewed GEO study not listed here, it is exactly the kind of contribution this chapter needs ([CONTRIBUTING.md](../CONTRIBUTING.md)).
+> The academic GEO canon in 2026 is roughly: **one founding optimization paper, one adversarial-manipulation paper, one controlled-factorial citation study (above), and a supporting cast of training-corpus and retrieval papers.** Everything else claiming to be "GEO research" — the studies in Part 3 — is **industry work**: valuable for scale, weaker for method, and usually run by a company selling a related product. Weight accordingly. If you know of a peer-reviewed GEO study not listed here, it is exactly the kind of contribution this chapter needs ([CONTRIBUTING.md](../CONTRIBUTING.md)).
 
 ---
 

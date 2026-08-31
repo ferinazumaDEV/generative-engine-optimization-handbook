@@ -147,6 +147,17 @@ On **1 July 2025**, Cloudflare — which fronts roughly a fifth of the web — b
 
 Why this belongs in a GEO chapter: **your host may already be blocking the bots that would cite you.** If you're on Cloudflare (or any provider with AI-bot defaults), check that your *desired* engines are allow-listed. A default block is a silent, invisible reason to be absent from AI answers.
 
+> **Update — Cloudflare tightens the default again (effective 15 September 2026).** Building on its 2025 opt-in flip, Cloudflare announced that for **newly onboarded domains** it will **block the Training and Agent crawler categories by default on ad-bearing pages** while leaving **Search** crawlers allowed — reasoning that an ad signals a page meant for a human. Crucially, **multi-purpose crawlers (e.g. `Googlebot`) are judged across *all* their behaviors**, so blocking "training" can catch a crawler you also rely on for search. Existing domains keep their current settings ([Cloudflare, 1 Jul 2026](https://blog.cloudflare.com/content-independence-day-ai-options/)). The takeaway is unchanged but sharper: **confirm the *search* crawlers you want are allowed** before this default reaches you.
+
+### Standardizing the signal: IETF AIPREF
+
+The ad-hoc, per-vendor tokens (`GPTBot`, `Google-Extended`, `Applebot-Extended`, …) are being pulled toward a **single machine-readable standard**. The IETF **AI Preferences (AIPREF)** working group is drafting a way to declare *purpose-specific* usage preferences — most importantly the split between **`train-ai`** (using content to modify a model's parameters) and **`search`** (linking/excerpting to direct users to the source). As of **19 August 2026**:
+
+- **[`draft-ietf-aipref-vocab-07`](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/)** defines the preference *vocabulary* (`train-ai`, `search`). ⚠️ It carries a prominent note that its contents **do not yet reflect working-group consensus** — expect the terms to move.
+- **[`draft-ietf-aipref-attach-05`](https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/)** defines how to *attach* those preferences to content: a **`Content-Usage` HTTP response header** (a structured-field dictionary, e.g. `Content-Usage: train-ai=n`) and a parallel **`Content-Usage` rule inside `robots.txt`** (longest-prefix matching, like `Allow`/`Disallow`).
+
+If AIPREF lands, it becomes the clean way to say *"you may crawl me for search/citation but not for training"* — per path — which today's split of training vs. search tokens only approximates. **It is a set of drafts, not a shipped standard;** check the datatracker pages before relying on it. `> ⚠️ pre-consensus / evolving — track the WG documents, don't hard-code the header yet.`
+
 ---
 
 ## Google-specific controls (and the AI Overviews trap)
