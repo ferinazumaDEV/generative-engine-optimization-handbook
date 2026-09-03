@@ -8,3 +8,9 @@ example\.com
 # BusinessWire press releases: server negotiates HTTP/2 badly and lychee errors
 # out on the connection. The URL is reachable in a normal browser.
 businesswire\.com
+
+# GlobeNewswire press releases: same failure mode as BusinessWire — the server
+# errors out on HTTP/2 for automated clients and times out for datacenter IPs.
+# Verified by hand 2026-09-03: the cited URL returns HTTP 200 with the right
+# article title in a real browser. Anti-bot artifact, not a dead link.
+globenewswire\.com
