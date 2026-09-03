@@ -54,6 +54,12 @@ GEO changes fast — engines ship, cite differently, and expose new controls alm
 - A running summary of notable changes lives in **[CHANGELOG.md](CHANGELOG.md)** (Keep a Changelog format).
 - Target cadence: **one update entry per ISO week.** Weeks with nothing material still get a short "no material change" note so the record is continuous.
 
+## How to cite
+
+Citation metadata lives in [`CITATION.cff`](CITATION.cff) — use GitHub's **"Cite this repository"** button on the repo page for APA/BibTeX. Plain-text form:
+
+> Aporta Franco, Fernando (ferinazumaDEV). *The GEO Handbook*. 2026. Repository: <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook>. Hub: <https://zentimes.es>.
+
 ## License
 
 Content is licensed under **[Creative Commons Attribution‑ShareAlike 4.0 International (CC BY‑SA 4.0)](LICENSE)**. You may share and adapt the material, even commercially, as long as you give appropriate credit and license your derivatives under the same terms. Full text: <https://creativecommons.org/licenses/by-sa/4.0/legalcode>.

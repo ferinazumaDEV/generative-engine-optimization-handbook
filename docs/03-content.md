@@ -60,6 +60,8 @@ If a paragraph only makes sense after three paragraphs of setup, it is a bad chu
 
 This is *mechanism-based consensus*, not a lab result (`⚠️` — no public controlled study isolates "self-contained chunks" as a variable), but it falls straight out of how RAG works and is the least controversial recommendation in the field.
 
+> **▶ Reproducible example.** The cookbook has a runnable before/after for this exact technique — a wall-of-text article vs the *same* sentences under headings, short sections and bullet lists, split by a standard recursive character splitter (`chunk_size = 800`) and measured at **0 of 5 self-contained chunks vs 5 of 5**. It is an offline extractability proxy (N = 1 article; it does not measure citation). Clone it and run `reproduce.sh`: [`03-content/chunk-friendly-structure`](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook/tree/main/03-content/chunk-friendly-structure).
+
 ### Anatomy of a citable passage
 
 ```
