@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- **DOI.** `v0.1.1` is archived on Zenodo, so the handbook is citable by a persistent
+  identifier instead of a repository URL. The concept DOI
+  [`10.5281/zenodo.22299644`](https://doi.org/10.5281/zenodo.22299644) always resolves to the latest release. Recorded in the
+  README badge and citation, `CITATION.cff`, `about.jsonld` and `llms.txt`.
+
 ## [0.1.1] — 2026-09-04
 
 ### Added
@@ -38,9 +45,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - GitHub templates: pull request template and a "new technique" issue template, both requiring cited/verifiable contributions.
 - `LICENSE`: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 
-<!-- The [0.1.1] heading has no link reference yet, and [Unreleased] still compares from
-     v0.1.0, on purpose: the v0.1.1 tag does not exist until this PR is merged, and the
-     link check would fail on a tag URL that 404s. Both are updated in the follow-up PR
-     that records the DOI, once the release exists. -->
-[Unreleased]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.1
 [0.1.0]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.0

@@ -19,6 +19,7 @@
 - [README](README.md): what this is and how it's sourced.
 - [Contributing](CONTRIBUTING.md): the cite-or-flag rule for every claim.
 - [Changelog](CHANGELOG.md): versioned history.
+- [Archived releases (Zenodo)](https://doi.org/10.5281/zenodo.22299644): every tagged release archived with a DOI; this concept DOI always resolves to the latest one. Cite this rather than the repository URL.
 
 ## Related
 - [Evidence-based prompt engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence): the input side — graded, sourced techniques.
