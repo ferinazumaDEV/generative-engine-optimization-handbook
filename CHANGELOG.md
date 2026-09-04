@@ -8,6 +8,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **[`CLAIMS.md`](CLAIMS.md)** — the maturity vocabulary (`established` / `mixed` / `experimental` / `folklore`, plus `reproducible`; `solid` == `established` as in the sibling ledger), the mapping from the markers the chapters already use, and a graded table of the twelve claims the handbook rests on.
+- **GEO ID Card** in the README, mirrored field by field from `about.jsonld`, which now also carries `abstract`, `citation`, `version`, `datePublished` and `dateModified`.
+- **[`ECOSYSTEM.md`](ECOSYSTEM.md)** — the canonical sibling list shared by the three GEO repositories; the README footer is a copy between `ecosystem:start` / `ecosystem:end` markers.
+- `updates/2026-W35.md` — the missing first week (initial `v0.1.0` release), so the weekly record is continuous.
+
+### Changed
+
+- **Sourcing wording**: the README, `llms.txt` and `CITATION.cff` no longer say "primary-sourced" / "every claim carries a primary source"; they now state the handbook's actual rule — a source or an explicit needs-verification flag, primary preferred, secondary labelled.
+- **Citation corrections**: removed a quotation attributed to Microsoft that appears in none of the cited sources (`02`); replaced the unsupported "3–6 million requests per day" with Cloudflare's own wording and post (`04`); fixed the Dodge et al. 2021 paper title (`05`, `07`, `09`); pointed the Bingbot "official doc" at Microsoft's own crawler page (`09`, `02`); corrected five citation dates (`06`, `09`); relabelled the Similarweb figure as secondary coverage (`07`).
+- **Limitations next to figures**: "up to 40%" now carries its ceiling caveat in the same sentence (README, `03`, `09`); the `03` TL;DR recency range matches its own table; three vendor / agency figures in `updates/2026-W36.md` are flagged as such.
+- `llms.txt`: absolute URLs, an Identity block (author, license, version, date, DOI, canonical URL) and links to `CLAIMS.md` and `CITATION.cff`.
+- Author credited by full name (Fernando Aporta Franco) in the README author line and attribution string; six glossary cross-reference labels now match their targets.
+
 - **DOI.** `v0.1.1` is archived on Zenodo, so the handbook is citable by a persistent
   identifier instead of a repository URL. The concept DOI
   [`10.5281/zenodo.22299644`](https://doi.org/10.5281/zenodo.22299644) always resolves to the latest release. Recorded in the

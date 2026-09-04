@@ -1,24 +1,35 @@
 # The GEO Handbook
 
-> Everything about Generative Engine Optimization (GEO) in one place: how to structure, write, and publish content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) understand, trust, and cite it. Every claim carries a primary source. Maintained by ferinazumaDEV.
+> Everything about Generative Engine Optimization (GEO) in one place: how to structure, write, and publish content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) understand, trust, and cite it. Every claim carries a source or an explicit needs-verification flag; primary sources are preferred and secondary (industry) sources are labelled as such. Maintained by Fernando Aporta Franco (ferinazumaDEV).
+
+## Identity
+- Author: Fernando Aporta Franco (ferinazumaDEV) — https://github.com/ferinazumaDEV · https://zentimes.es
+- License: CC-BY-SA-4.0
+- Version: 0.1.1
+- Last modified: 2026-09-04
+- DOI: 10.5281/zenodo.22299644 (concept DOI, always the latest release)
+- Canonical URL: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook
+- Machine-readable metadata: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/about.jsonld
 
 ## Start here
-- [Foundations — what GEO is and where to start](docs/01-foundations.md): definitions, first principles, the KDD 2024 paper.
-- [Engines — how AI answer engines work](docs/02-engines.md): retrieval, ranking, and citation in generative search.
+- [Foundations — what GEO is and where to start](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/01-foundations.md): definitions, first principles, the KDD 2024 paper.
+- [Engines — how AI answer engines work](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/02-engines.md): retrieval, ranking, and citation in generative search.
 
 ## Core chapters
-- [Content](docs/03-content.md): writing and structuring for extraction and citation.
-- [Technical](docs/04-technical.md): rendering, crawlability, structured data, llms.txt.
-- [Authority](docs/05-authority.md): E-E-A-T, entities, and trust signals machines can read.
-- [Measurement](docs/06-measurement.md): how to measure citation share and AI visibility.
-- [Research & cases](docs/07-research-cases.md): the primary studies and what they found.
-- [Future & ethics](docs/08-future-ethics.md): where GEO is going and the guardrails.
-- [Glossary](docs/09-glossary.md): the vocabulary of GEO.
+- [Content](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/03-content.md): writing and structuring for extraction and citation.
+- [Technical](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/04-technical.md): rendering, crawlability, structured data, llms.txt.
+- [Authority](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/05-authority.md): E-E-A-T, entities, and trust signals machines can read.
+- [Measurement](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/06-measurement.md): how to measure citation share and AI visibility.
+- [Research & cases](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/07-research-cases.md): the primary studies and what they found.
+- [Future & ethics](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/08-future-ethics.md): where GEO is going and the guardrails.
+- [Glossary](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/09-glossary.md): the vocabulary of GEO.
 
 ## Meta
-- [README](README.md): what this is and how it's sourced.
-- [Contributing](CONTRIBUTING.md): the cite-or-flag rule for every claim.
-- [Changelog](CHANGELOG.md): versioned history.
+- [README](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/README.md): what this is and how it's sourced, with the GEO ID Card.
+- [Claims](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/CLAIMS.md): the maturity vocabulary and the graded claims the handbook rests on.
+- [Citation metadata](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/CITATION.cff): CITATION.cff, what GitHub's "Cite this repository" button renders.
+- [Contributing](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/CONTRIBUTING.md): the cite-or-flag rule for every claim.
+- [Changelog](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/CHANGELOG.md): versioned history.
 - [Archived releases (Zenodo)](https://doi.org/10.5281/zenodo.22299644): every tagged release archived with a DOI; this concept DOI always resolves to the latest one. Cite this rather than the repository URL.
 
 ## Related

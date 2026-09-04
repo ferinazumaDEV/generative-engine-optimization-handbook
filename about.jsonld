@@ -25,9 +25,14 @@
       "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
       "inLanguage": "en",
       "keywords": ["generative engine optimization", "GEO", "AI search", "answer engines", "LLM citation"],
+      "abstract": "A comprehensive, sourced reference on Generative Engine Optimization (GEO): structuring, writing, and publishing content so it is understood, trusted, and cited by generative AI answer engines.",
       "isBasedOn": "https://arxiv.org/abs/2311.09735",
+      "citation": ["https://arxiv.org/abs/2311.09735"],
       "identifier": "https://doi.org/10.5281/zenodo.22299644",
-      "sameAs": ["https://doi.org/10.5281/zenodo.22299644"]
+      "sameAs": ["https://doi.org/10.5281/zenodo.22299644"],
+      "version": "0.1.1",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-09-04"
     }
   ]
 }

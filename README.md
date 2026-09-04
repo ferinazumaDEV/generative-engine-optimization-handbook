@@ -2,11 +2,30 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22299644.svg)](https://doi.org/10.5281/zenodo.22299644)
 
-**Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every single claim carries a real, verifiable source**.
+**Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every claim carries a real, verifiable source or an explicit needs-verification flag**.
 
 > **Generative Engine Optimization (GEO)** is the practice of structuring, writing, and publishing content so that it is understood, trusted, and **cited by generative AI engines** — such as ChatGPT, Perplexity, Google AI Overviews / AI Mode, Gemini, and Copilot — when they answer a user's question.
 
-The term was coined in the peer-reviewed paper *"GEO: Generative Engine Optimization"* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, & Deshpande), presented at **KDD 2024** — [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900). That study was the first to show, in a controlled experiment, that content can be deliberately optimized for higher visibility in AI‑generated answers, reporting visibility gains of **up to 40%** from content‑level signals such as citing sources, adding statistics, and quoting credible authorities.
+The term was coined in the peer-reviewed paper *"GEO: Generative Engine Optimization"* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, & Deshpande), presented at **KDD 2024** — [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900). That study was the first to show, in a controlled experiment, that content can be deliberately optimized for higher visibility in AI‑generated answers, reporting visibility gains of **up to 40%** from content‑level signals such as citing sources, adding statistics, and quoting credible authorities (the best method on the best metric, measured on a GPT‑3.5‑era engine in 2023–24 — a ceiling, not an average; see [07 · Research](docs/07-research-cases.md)).
+
+## GEO ID Card
+
+The machine-readable version of this table is [`about.jsonld`](about.jsonld) (schema.org JSON-LD). That file is the source of truth; this table mirrors it field by field.
+
+| Field | Value |
+|---|---|
+| Type | `CreativeWork` — *The GEO Handbook* |
+| Creator | Fernando Aporta Franco (ferinazumaDEV) · sameAs: [github.com/ferinazumaDEV](https://github.com/ferinazumaDEV), [zentimes.es](https://zentimes.es) |
+| Abstract | A comprehensive, sourced reference on Generative Engine Optimization (GEO): structuring, writing, and publishing content so it is understood, trusted, and cited by generative AI answer engines. |
+| Based on | [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) — Aggarwal et al., *GEO: Generative Engine Optimization*, KDD 2024 |
+| Sources | Work-level citation: [arXiv:2311.09735](https://arxiv.org/abs/2311.09735). Every chapter lists its own sources, primary ones first; secondary (industry) sources are labelled as such |
+| Cite as | DOI [10.5281/zenodo.22299644](https://doi.org/10.5281/zenodo.22299644) (concept DOI, always the latest release) — [`CITATION.cff`](CITATION.cff) |
+| Canonical URL | <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook> |
+| License | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Version | 0.1.1 |
+| Published | 2026-08-25 |
+| Last modified | 2026-09-04 |
+| Maturity | see [CLAIMS.md](CLAIMS.md) |
 
 ---
 
@@ -36,7 +55,7 @@ This handbook is a **free, public, community-maintained reference** on how gener
 | 08 | [Future & Ethics](docs/08-future-ethics.md) | Where GEO is heading, prompt/answer manipulation risks, disclosure, and doing this responsibly |
 | 09 | [Glossary](docs/09-glossary.md) | Plain-language definitions of every term used across the handbook |
 
-> All nine chapters are written and cited (100+ primary sources, cited throughout). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
+> All nine chapters are written and cited (100+ sources cited throughout — primary where available, secondary ones labelled). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
 
 ---
 
@@ -70,19 +89,28 @@ Content is licensed under **[Creative Commons Attribution‑ShareAlike 4.0 Inter
 
 ## Author & maintainer
 
-Created and maintained by **ferinazumaDEV** (Fernando). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — ferinazumaDEV, CC BY‑SA 4.0"* is appreciated.
+Created and maintained by Fernando Aporta Franco (ferinazumaDEV). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — Fernando Aporta Franco, CC BY‑SA 4.0"* is appreciated.
 
-## Part of the ferinazumaDEV ecosystem
+## Part of a cluster of open work
 
-This handbook is the reference hub of a cluster of open work by **ferinazumaDEV** on making content and systems legible to machines:
+<!-- ecosystem:start -->
+Part of a cluster of open work on making content legible to machines, by **Fernando Aporta Franco** ([ferinazumaDEV](https://github.com/ferinazumaDEV)):
 
-- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the reproducible companion: a `before/` and an `after/` for each technique in this handbook, with the measurement and a one-command script.
-- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the input side: a ledger grading techniques `solid` / `mixed` / `folklore`, with a primary source per entry.
-- **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — a token-efficient "second brain" for AI agents (local memory + NotebookLM + knowledge routing); the practical companion to keeping a citable, machine-readable corpus.
-- **[typedout](https://github.com/ferinazumaDEV/typedout)** — reliable structured output from any LLM (schema-validated JSON, tolerant repair, retries).
-- **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a careful, well-behaved HTTP client for Python (retries, per-host rate-limiting, caching): the well-behaved way to crawl.
-- **[scaffld](https://github.com/ferinazumaDEV/scaffld)** · **[webhook-replay](https://github.com/ferinazumaDEV/webhook-replay)** · **[framesig](https://github.com/ferinazumaDEV/framesig)** — more open developer tooling from the same author.
-- **Hub & writing:** **[zentimes.es](https://zentimes.es)** — including *[Measured, Not Claimed](https://zentimes.es/experiments/)*, a write-up of the cookbook's six measurements with what each one does **not** prove.
+**Three layers on GEO (Generative Engine Optimization)**
+- **[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — the reference: what to do and why, with sources (theory).
+- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — six reproducible before/after recipes with offline measurements (practice).
+- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — a graded, sourced ledger of prompting techniques (the input side).
+
+**Small open tools**
+- [typedout](https://github.com/ferinazumaDEV/typedout) — reliable structured output from OpenAI and Anthropic, with a provider interface for others.
+- [politeclient](https://github.com/ferinazumaDEV/politeclient) — a polite HTTP client for Python: retries with backoff, per-host rate limiting, caching, pagination.
+- [webhook-replay](https://github.com/ferinazumaDEV/webhook-replay) — capture a webhook once, then replay it at your local app as many times as you need.
+- [scaffld](https://github.com/ferinazumaDEV/scaffld) — scaffold fully-wired Python projects from templates, with a TUI.
+- [framesig](https://github.com/ferinazumaDEV/framesig) — find on-screen events in video by pixel signature; no ML.
+- [notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system) — a token-efficient second brain for AI agents on top of NotebookLM.
+
+Hub and writing: **[zentimes.es](https://zentimes.es)**.
+<!-- ecosystem:end -->
 
 More at **[github.com/ferinazumaDEV](https://github.com/ferinazumaDEV)**.
 
