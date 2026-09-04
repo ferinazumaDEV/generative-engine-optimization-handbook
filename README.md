@@ -89,19 +89,28 @@ Content is licensed under **[Creative Commons Attribution‑ShareAlike 4.0 Inter
 
 ## Author & maintainer
 
-Created and maintained by **ferinazumaDEV** (Fernando). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — ferinazumaDEV, CC BY‑SA 4.0"* is appreciated.
+Created and maintained by Fernando Aporta Franco (ferinazumaDEV). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — Fernando Aporta Franco, CC BY‑SA 4.0"* is appreciated.
 
-## Part of the ferinazumaDEV ecosystem
+## Part of a cluster of open work
 
-This handbook is the reference hub of a cluster of open work by **ferinazumaDEV** on making content and systems legible to machines:
+<!-- ecosystem:start -->
+Part of a cluster of open work on making content legible to machines, by **Fernando Aporta Franco** ([ferinazumaDEV](https://github.com/ferinazumaDEV)):
 
-- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the reproducible companion: a `before/` and an `after/` for each technique in this handbook, with the measurement and a one-command script.
-- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the input side: a ledger grading techniques `solid` / `mixed` / `folklore`, with a primary source per entry.
-- **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — a token-efficient "second brain" for AI agents (local memory + NotebookLM + knowledge routing); the practical companion to keeping a citable, machine-readable corpus.
-- **[typedout](https://github.com/ferinazumaDEV/typedout)** — reliable structured output from any LLM (schema-validated JSON, tolerant repair, retries).
-- **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a careful, well-behaved HTTP client for Python (retries, per-host rate-limiting, caching): the well-behaved way to crawl.
-- **[scaffld](https://github.com/ferinazumaDEV/scaffld)** · **[webhook-replay](https://github.com/ferinazumaDEV/webhook-replay)** · **[framesig](https://github.com/ferinazumaDEV/framesig)** — more open developer tooling from the same author.
-- **Hub & writing:** **[zentimes.es](https://zentimes.es)** — including *[Measured, Not Claimed](https://zentimes.es/experiments/)*, a write-up of the cookbook's six measurements with what each one does **not** prove.
+**Three layers on GEO (Generative Engine Optimization)**
+- **[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — the reference: what to do and why, with sources (theory).
+- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — six reproducible before/after recipes with offline measurements (practice).
+- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — a graded, sourced ledger of prompting techniques (the input side).
+
+**Small open tools**
+- [typedout](https://github.com/ferinazumaDEV/typedout) — reliable structured output from OpenAI and Anthropic, with a provider interface for others.
+- [politeclient](https://github.com/ferinazumaDEV/politeclient) — a polite HTTP client for Python: retries with backoff, per-host rate limiting, caching, pagination.
+- [webhook-replay](https://github.com/ferinazumaDEV/webhook-replay) — capture a webhook once, then replay it at your local app as many times as you need.
+- [scaffld](https://github.com/ferinazumaDEV/scaffld) — scaffold fully-wired Python projects from templates, with a TUI.
+- [framesig](https://github.com/ferinazumaDEV/framesig) — find on-screen events in video by pixel signature; no ML.
+- [notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system) — a token-efficient second brain for AI agents on top of NotebookLM.
+
+Hub and writing: **[zentimes.es](https://zentimes.es)**.
+<!-- ecosystem:end -->
 
 More at **[github.com/ferinazumaDEV](https://github.com/ferinazumaDEV)**.
 
