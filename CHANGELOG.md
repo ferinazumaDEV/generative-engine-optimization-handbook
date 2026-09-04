@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **Citation precision fixes** in `02 · The Engines` and `04 · Technical GEO`: completed a truncated Google quote on `Google-Extended` (*"…nor is it used as a ranking signal in Google Search"*), moved the "does not affect Search ranking" attribution from the AI-features page to [`google-common-crawlers`](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers) where the sentence actually appears (in both the crawler table and the publisher-controls list), added Google's *written* "no AI text files needed" statement — flagged as the narrower non-necessity claim it is, scoped to Google's own AI features — alongside the existing oral Illyes/Mueller comments in the `llms.txt` verdict, and widened the `Google-Extended` grounding scope to the four destinations Google lists (Gemini Apps and Vertex AI, training and grounding).
 - `04 · Technical GEO`: added the **IETF AIPREF** standardization (`train-ai` vs `search`; the `Content-Usage` HTTP header and `robots.txt` rule) and **Cloudflare's 15 Sep 2026** default block of training/agent crawlers on ad-bearing pages.
 - `02 · The Engines`: added Google's embeddable **Preferred Sources** button and **AI Mode link carousels** to the Google publisher-controls profile.
 - `07 · Research & Case Studies`: added the **SIGIR 2026 "What Gets Cited"** controlled-factorial study (252k trials; relevance + list position win, formatting barely helps) to Part 2.
