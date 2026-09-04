@@ -1,5 +1,7 @@
 # The GEO Handbook
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22299644.svg)](https://doi.org/10.5281/zenodo.22299644)
+
 **Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every single claim carries a real, verifiable source**.
 
 > **Generative Engine Optimization (GEO)** is the practice of structuring, writing, and publishing content so that it is understood, trusted, and **cited by generative AI engines** — such as ChatGPT, Perplexity, Google AI Overviews / AI Mode, Gemini, and Copilot — when they answer a user's question.
@@ -56,9 +58,11 @@ GEO changes fast — engines ship, cite differently, and expose new controls alm
 
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](CITATION.cff) — use GitHub's **"Cite this repository"** button on the repo page for APA/BibTeX. Plain-text form:
+Every tagged release is archived on Zenodo with a DOI. Cite the **concept DOI** — it always resolves to the latest release. Each release also carries its own version DOI, on its own record page, if you need to pin one exact state of the text.
 
-> Aporta Franco, Fernando (ferinazumaDEV). *The GEO Handbook*. 2026. Repository: <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook>. Hub: <https://zentimes.es>.
+> Aporta Franco, Fernando. *The GEO Handbook*. Zenodo, 2026. <https://doi.org/10.5281/zenodo.22299644>.
+
+The same metadata lives in [`CITATION.cff`](CITATION.cff) — GitHub's **"Cite this repository"** button on the repo page renders it as APA or BibTeX.
 
 ## License
 
