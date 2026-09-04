@@ -339,7 +339,7 @@ Ordered by evidence tier: **Demonstrated / peer-reviewed** first, then **Documen
 
 - **Brown, T. B., et al. (2020). *Language Models are Few-Shot Learners* (GPT-3).** — Wikipedia sampled 3.4 epochs vs. Common Crawl 0.44 (Table 2.2). [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)
 - **Radford, A., et al. (2019). *Language Models are Unsupervised Multitask Learners* (GPT-2).** — WebText = Reddit-linked pages with ≥3 karma. [OpenAI PDF](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
-- **Dodge, J., et al. (2021). *Documenting the English Colossal Clean Crawled Corpus (C4).* EMNLP 2021.** — a small set of large domains dominates a common training corpus. [ACL Anthology](https://aclanthology.org/2021.emnlp-main.98/) · [arXiv:2104.08758](https://arxiv.org/abs/2104.08758)
+- **Dodge, J., et al. (2021). *Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus* (C4). EMNLP 2021.** — a small set of large domains dominates a common training corpus. [ACL Anthology](https://aclanthology.org/2021.emnlp-main.98/) · [arXiv:2104.08758](https://arxiv.org/abs/2104.08758)
 
 **Tier 2 — Observed at scale (large-N, correlational; mostly industry — treat as reported)**
 
@@ -353,6 +353,6 @@ Ordered by evidence tier: **Demonstrated / peer-reviewed** first, then **Documen
 
 - **Pew Research Center (2025). *Google users are less likely to click on links when an AI summary appears.*** — 68,879 searches / 900 U.S. adults, March 2025; 8% vs 15% click-through, 1% summary-link clicks, 26% vs 16% session-end. [pewresearch.org](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
 - **SparkToro / Similarweb (2026). *In 2026, Less than One Third of Google Searches Still Send a Click.*** — the zero-click landscape (~68%). [sparktoro.com](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/)
-- **Similarweb (2025). *2025 Generative AI Landscape.*** — AI prompts ~17× longer than Google searches. [similarweb.com](https://officechai.com/ai/chatgpt-queries-17x-longer-than-google-searches-6x-longer-than-googles-ai-mode-similarweb-data/)
+- **Similarweb (2025). *2025 Generative AI Landscape.*** — AI prompts ~17× longer than Google searches. [via OfficeChai](https://officechai.com/ai/chatgpt-queries-17x-longer-than-google-searches-6x-longer-than-googles-ai-mode-similarweb-data/) `⚠️ needs verification: secondary coverage; Similarweb's own report page for this figure has not been located`
 
 > **Found an error, a dead link, or — especially — a peer-reviewed GEO study or a properly-controlled case study we're missing?** This is the chapter where sourcing matters most. See [CONTRIBUTING.md](../CONTRIBUTING.md): every claim carries a real source and an evidence tier, or an honest `⚠️ needs verification` flag. If you add a statistic, bring its **sample size, method, and exact metric definition** — half the disagreements in this field are two studies measuring different things and calling them the same word.

@@ -97,11 +97,11 @@ An inbound hyperlink from another site — the classic SEO authority signal. In 
 
 ### Bingbot
 
-Microsoft's search crawler. It matters disproportionately for GEO because the **Bing index powers ChatGPT Search and Microsoft Copilot's** retrieval, so being indexed in Bing is a prerequisite for citation on those surfaces. ([llmpulse crawler index](https://llmpulse.ai/ai-crawler-index/bingbot)) → [04 · Technical GEO](04-technical.md#ai-crawlers-the-bots-you-need-to-know)
+Microsoft's search crawler. It matters disproportionately for GEO because the **Bing index powers ChatGPT Search and Microsoft Copilot's** retrieval, so being indexed in Bing is a prerequisite for citation on those surfaces. ([Bing Webmaster Tools — which crawlers does Bing use](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0) · [llmpulse crawler index](https://llmpulse.ai/ai-crawler-index/bingbot), industry source) → [04 · Technical GEO](04-technical.md#ai-crawlers-the-bots-you-need-to-know)
 
 ### Brand mention (unlinked mention)
 
-Any reference to your brand/entity in text, **whether or not it links to you**. Because LLMs learn from [co-occurrence](#co-occurrence-branded-co-occurrence) in text rather than from links, an unlinked mention on a trusted page carries real GEO weight — a conceptual break from link-centric SEO. Count unlinked mentions as wins. ([GrowthX, 2026](https://growthx.ai/learn/branded-co-occurrence-ai-search) · [Ahrefs, 2026](https://ahrefs.com/blog/ai-brand-visibility-correlations/)) → [05 · Authority & Trust](05-authority.md#backlinks-vs-brand-mentions-in-the-geo-era)
+Any reference to your brand/entity in text, **whether or not it links to you**. Because LLMs learn from [co-occurrence](#co-occurrence-branded-co-occurrence) in text rather than from links, an unlinked mention on a trusted page carries real GEO weight — a conceptual break from link-centric SEO. Count unlinked mentions as wins. ([GrowthX, 2026](https://growthx.ai/learn/branded-co-occurrence-ai-search) · [Ahrefs, Dec 2025](https://ahrefs.com/blog/ai-brand-visibility-correlations/)) → [05 · Authority & Trust](05-authority.md#backlinks-vs-brand-mentions-in-the-geo-era)
 
 ---
 
@@ -109,7 +109,7 @@ Any reference to your brand/entity in text, **whether or not it links to you**. 
 
 ### C4 (Colossal Clean Crawled Corpus)
 
-A large, cleaned snapshot of [Common Crawl](#common-crawl--ccbot) used to train many language models. Notable for GEO because analyses of what's *in* it show a handful of domains dominate — a reason certain sources (Wikipedia, major publishers) are structurally over-represented in model "priors." ([Documenting the C4 corpus, EMNLP 2021](https://arxiv.org/abs/2104.08758)) → [05 · Authority & Trust](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
+A large, cleaned snapshot of [Common Crawl](#common-crawl--ccbot) used to train many language models. Notable for GEO because analyses of what's *in* it show a handful of domains dominate — a reason certain sources (Wikipedia, major publishers) are structurally over-represented in model "priors." ([Documenting the C4 corpus, EMNLP 2021](https://arxiv.org/abs/2104.08758)) → [07 · Research & Cases](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
 
 ### ChatGPT / ChatGPT Search (OpenAI)
 
@@ -221,7 +221,7 @@ How easily a **correct, self-contained answer can be lifted** from your content 
 
 ### FAQ / FAQPage schema
 
-A Q&A content block, optionally marked up with schema.org `FAQPage`. Useful as an **extractable format** (question-shaped headings map well to real queries), but a cautionary tale on markup: Google **dropped FAQ rich results** from most sites in 2023, so the *rich-result* payoff is largely gone even though the *format* still helps extraction. Date any schema claim. ([Search Engine Journal, 2023](https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/)) → [03 · Content](03-content.md) · [04 · Technical](04-technical.md#structured-data-schemaorg-and-json-ld)
+A Q&A content block, optionally marked up with schema.org `FAQPage`. Useful as an **extractable format** (question-shaped headings map well to real queries), but a cautionary tale on markup: Google **narrowed FAQ rich results** in 2023 and removed them entirely on 7 May 2026, so the *rich-result* payoff is gone even though the *format* still helps extraction. Date any schema claim. ([Search Engine Journal, May 2026](https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/)) → [03 · Content](03-content.md) · [04 · Technical](04-technical.md#structured-data-schemaorg-and-json-ld)
 
 ### Featured snippet
 
@@ -249,7 +249,7 @@ The term from the founding paper: a system that uses generative models (LLMs) to
 
 ### GEO (Generative Engine Optimization)
 
-The practice of structuring, writing, and publishing content so that **generative engines understand it, trust it, and cite or recommend it** when answering a user's question. Coined in the peer-reviewed paper *GEO: Generative Engine Optimization* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, Deshpande), presented at **KDD 2024**, the first controlled study to show content can be deliberately optimized for AI-answer visibility (gains of up to ~40%). ([arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900)) → [01 · Foundations](01-foundations.md#what-is-geo)
+The practice of structuring, writing, and publishing content so that **generative engines understand it, trust it, and cite or recommend it** when answering a user's question. Coined in the peer-reviewed paper *GEO: Generative Engine Optimization* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, Deshpande), presented at **KDD 2024**, the first controlled study to show content can be deliberately optimized for AI-answer visibility (gains of up to ~40% — the best method on the best metric, on a GPT-3.5-era engine; a ceiling, not an average). ([arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900)) → [01 · Foundations](01-foundations.md#what-is-geo)
 
 ### GEO-bench
 
@@ -261,7 +261,7 @@ The nine content-rewrite methods the founding paper tested on source pages: **Au
 
 ### G-Eval
 
-An LLM-as-judge evaluation method (a model scores outputs against defined criteria). The founding paper uses it to compute the [Subjective Impression](#subjective-impression) metric across ~7 sub-dimensions of prominence. `⚠️ LLM-judge scores are useful but not ground truth — they inherit the judge model's biases.` → [07 · Research & Cases](06-measurement.md#the-academic-metrics-worth-knowing)
+An LLM-as-judge evaluation method (a model scores outputs against defined criteria). The founding paper uses it to compute the [Subjective Impression](#subjective-impression) metric across ~7 sub-dimensions of prominence. `⚠️ LLM-judge scores are useful but not ground truth — they inherit the judge model's biases.` → [06 · Measurement](06-measurement.md#the-academic-metrics-worth-knowing)
 
 ### Google-Extended
 
@@ -309,11 +309,11 @@ See [Answer-first](#answer-first-inverted-pyramid).
 
 ### JavaScript rendering problem
 
-The finding that **most AI crawlers do not execute JavaScript** — they read the raw HTML your server returns. Content injected client-side (by React/Vue/etc. without SSR) is often invisible to them, so it can't be cited. The fix is [server-side rendering or static generation](#ssr-server-side-rendering--ssg-static-site-generation). ([Vercel, 2025](https://vercel.com/blog/the-rise-of-the-ai-crawler)) → [04 · Technical GEO](04-technical.md#rendering-and-crawlability-the-javascript-problem)
+The finding that **most AI crawlers do not execute JavaScript** — they read the raw HTML your server returns. Content injected client-side (by React/Vue/etc. without SSR) is often invisible to them, so it can't be cited. The fix is [server-side rendering or static generation](#ssr-server-side-rendering--ssg-static-site-generation). ([Vercel, Dec 2024](https://vercel.com/blog/the-rise-of-the-ai-crawler)) → [04 · Technical GEO](04-technical.md#rendering-and-crawlability-the-javascript-problem)
 
 ### JSON-LD
 
-A syntax (JavaScript Object Notation for Linked Data) for embedding [structured data](#structured-data-schemaorg--json-ld) in a page, Google's recommended schema format. Note the evidence: at least one large 2025 study found **JSON-LD schema markup had no measurable direct effect on AI citation** — it aids machine understanding and classic rich results, but don't promise a citation lift from it. `⚠️ effect on AI citation is contested.` ([Ahrefs / Search Engine Journal, 2025](https://www.searchenginejournal.com/ai-search-myths-debunked-ahrefs-spa/584393/)) → [04 · Technical GEO](04-technical.md#structured-data-schemaorg-and-json-ld)
+A syntax (JavaScript Object Notation for Linked Data) for embedding [structured data](#structured-data-schemaorg--json-ld) in a page, Google's recommended schema format. Note the evidence: at least one large 2026 study found **JSON-LD schema markup had no measurable direct effect on AI citation** — it aids machine understanding and classic rich results, but don't promise a citation lift from it. `⚠️ effect on AI citation is contested.` ([Ahrefs / Search Engine Journal, 2026](https://www.searchenginejournal.com/ai-search-myths-debunked-ahrefs-spa/584393/)) → [04 · Technical GEO](04-technical.md#structured-data-schemaorg-and-json-ld)
 
 ---
 
@@ -417,7 +417,7 @@ Perplexity's tokens: **PerplexityBot** indexes the web for Perplexity's answers,
 
 ### Position-Adjusted Word Count
 
-One of the two academic visibility metrics in the founding paper: how many words of the answer are **attributed to your source, discounted the later they appear** (exponential decay by citation position). It captures that a source quoted early and at length is "more visible" than one mentioned briefly at the end. ([Aggarwal et al., 2024](https://arxiv.org/abs/2311.09735)) → [07 · Research & Cases](06-measurement.md#the-academic-metrics-worth-knowing)
+One of the two academic visibility metrics in the founding paper: how many words of the answer are **attributed to your source, discounted the later they appear** (exponential decay by citation position). It captures that a source quoted early and at length is "more visible" than one mentioned briefly at the end. ([Aggarwal et al., 2024](https://arxiv.org/abs/2311.09735)) → [06 · Measurement](06-measurement.md#the-academic-metrics-worth-knowing)
 
 ### Presence rate (mention rate)
 
@@ -517,11 +517,11 @@ One of the top-performing [nine methods](#geo-content-methods-the-nine): adding 
 
 ### Structured data (schema.org / JSON-LD)
 
-Machine-readable markup describing what a page is *about* (an article, product, person, FAQ), typically written in [JSON-LD](#json-ld) using the **schema.org** vocabulary. It aids entity understanding and classic rich results; its **direct** effect on AI *citation* is contested (at least one large 2025 study found none). Add correct schema for understanding — don't promise a citation lift from it. `⚠️` ([schema.org](https://schema.org/) · [Google intro to structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)) → [04 · Technical GEO](04-technical.md#structured-data-schemaorg-and-json-ld)
+Machine-readable markup describing what a page is *about* (an article, product, person, FAQ), typically written in [JSON-LD](#json-ld) using the **schema.org** vocabulary. It aids entity understanding and classic rich results; its **direct** effect on AI *citation* is contested (at least one large 2026 study found none). Add correct schema for understanding — don't promise a citation lift from it. `⚠️` ([schema.org](https://schema.org/) · [Google intro to structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)) → [04 · Technical GEO](04-technical.md#structured-data-schemaorg-and-json-ld)
 
 ### Subjective Impression
 
-The second academic visibility metric in the founding paper: an **LLM-judged composite** (via [G-Eval](#g-eval)) across ~7 sub-dimensions — relevance, influence, uniqueness, position, count, click-likelihood, diversity — capturing *qualitative* prominence a raw word count misses. ([Aggarwal et al., 2024](https://arxiv.org/abs/2311.09735)) → [07 · Research & Cases](06-measurement.md#the-academic-metrics-worth-knowing)
+The second academic visibility metric in the founding paper: an **LLM-judged composite** (via [G-Eval](#g-eval)) across ~7 sub-dimensions — relevance, influence, uniqueness, position, count, click-likelihood, diversity — capturing *qualitative* prominence a raw word count misses. ([Aggarwal et al., 2024](https://arxiv.org/abs/2311.09735)) → [06 · Measurement](06-measurement.md#the-academic-metrics-worth-knowing)
 
 ---
 
@@ -537,7 +537,7 @@ How quickly your server starts responding. For AI crawlers, **fast, reliable HTM
 
 ### Training corpus / training data
 
-The body of text a model was trained on. Some sources are structurally **over-represented** — e.g. GPT-3 sampled **Wikipedia ~3.4×** its token share ([Brown et al., 2020](https://arxiv.org/abs/2005.14165)) — which shapes a model's default "priors" about who is authoritative. Distinct from what an engine *retrieves* at answer time. → [05 · Authority & Trust](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
+The body of text a model was trained on. Some sources are structurally **over-represented** — e.g. GPT-3 sampled **Wikipedia ~3.4×** its token share ([Brown et al., 2020](https://arxiv.org/abs/2005.14165)) — which shapes a model's default "priors" about who is authoritative. Distinct from what an engine *retrieves* at answer time. → [07 · Research & Cases](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
 
 ### Training-time vs. retrieval-time attribution
 
@@ -571,7 +571,7 @@ Definitions only — the canonical **per-purpose control matrix** (what to allow
 | `Claude-User` | Anthropic | Live, user-triggered fetch | [Anthropic](https://support.claude.com/en/articles/8896518) |
 | `Googlebot` | Google | Search index (gates AI Overviews/AI Mode eligibility) | [Google](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers) |
 | `Google-Extended` | Google | **Opt-out control** for Gemini training/grounding (≠ AI Overviews) | [Google](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers) |
-| `Bingbot` | Microsoft | Search index (powers ChatGPT Search & Copilot) | [Microsoft](https://llmpulse.ai/ai-crawler-index/bingbot) |
+| `Bingbot` | Microsoft | Search index (powers ChatGPT Search & Copilot) | [Microsoft](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0) |
 | `CCBot` | Common Crawl | Open web crawl feeding many training sets | [Common Crawl](https://commoncrawl.org/ccbot) |
 | `Amazonbot` | Amazon | Crawl for Amazon/Alexa AI | [Amazon](https://developer.amazon.com/amazonbot) |
 
@@ -593,7 +593,7 @@ The **open, structured knowledge base** (sister project to Wikipedia) that many 
 
 ### Wikipedia (up-weighting)
 
-Wikipedia is structurally privileged in AI systems: heavily **over-sampled in training** (GPT-3 sampled it ~3.4× its token share — [Brown et al., 2020](https://arxiv.org/abs/2005.14165)) and dominant in the indexes engines retrieve from. This is *why* Wikipedia-corroborated facts surface so often — and why earning legitimate Wikipedia/Wikidata presence (without astroturfing) helps. → [05 · Authority & Trust](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
+Wikipedia is structurally privileged in AI systems: heavily **over-sampled in training** (GPT-3 sampled it ~3.4× its token share — [Brown et al., 2020](https://arxiv.org/abs/2005.14165)) and dominant in the indexes engines retrieve from. This is *why* Wikipedia-corroborated facts surface so often — and why earning legitimate Wikipedia/Wikidata presence (without astroturfing) helps. → [07 · Research & Cases](07-research-cases.md#why-some-sources-dominate-the-training-corpus-papers)
 
 ---
 
@@ -629,7 +629,7 @@ Primary and origin sources for the definitions above. All links verified as of *
 **Founding research & benchmark**
 - Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). **GEO: Generative Engine Optimization.** *KDD 2024.* [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900) · [project page & data](https://generative-engines.com/GEO/) · [code](https://github.com/GEO-optim/GEO)
 - Brown, T. et al. (2020). **Language Models are Few-Shot Learners** (GPT-3; training-mix weighting). [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)
-- Dodge, J. et al. (2021). **Documenting the English Colossal Clean Crawled Corpus (C4).** *EMNLP 2021.* [arXiv:2104.08758](https://arxiv.org/abs/2104.08758)
+- Dodge, J. et al. (2021). **Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus** (C4). *EMNLP 2021.* [arXiv:2104.08758](https://arxiv.org/abs/2104.08758)
 
 **Standards, conventions & controls**
 - **RFC 9309 — Robots Exclusion Protocol.** [rfc-editor.org](https://www.rfc-editor.org/info/rfc9309/)
@@ -649,7 +649,7 @@ Primary and origin sources for the definitions above. All links verified as of *
 - **SparkToro / Similarweb (2026)** — zero-click majority. [sparktoro.com](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/)
 - **Pew Research (2025)** — AI summaries reduce clicks. [pewresearch.org](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
 - **Ahrefs (2025–2026)** — AI-search myths & brand-visibility correlations (schema/no-effect, mentions). [searchenginejournal.com](https://www.searchenginejournal.com/ai-search-myths-debunked-ahrefs-spa/584393/) · [ahrefs.com](https://ahrefs.com/blog/ai-brand-visibility-correlations/)
-- **Vercel (2025)** — AI crawlers don't run JavaScript. [vercel.com](https://vercel.com/blog/the-rise-of-the-ai-crawler)
+- **Vercel (Dec 2024)** — AI crawlers don't run JavaScript. [vercel.com](https://vercel.com/blog/the-rise-of-the-ai-crawler)
 - **Cloudflare (2025)** — block-by-default & Pay-Per-Crawl. [cloudflare.com](https://www.cloudflare.com/press/press-releases/2025/cloudflare-just-changed-how-ai-crawlers-scrape-the-internet-at-large/) · [Search Engine Land](https://searchengineland.com/cloudflare-to-block-ai-crawlers-by-default-with-new-pay-per-crawl-initiative-457708)
 - **GrowthX (2026)** — branded co-occurrence. [growthx.ai](https://growthx.ai/learn/branded-co-occurrence-ai-search)
 - **CJR (2025)** — AI licensing deals (Reddit, RSL). [cjr.org](https://www.cjr.org/analysis/reddit-winning-ai-licensing-deals-openai-google-gemini-answers-rsl.php)
