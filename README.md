@@ -8,6 +8,25 @@
 
 The term was coined in the peer-reviewed paper *"GEO: Generative Engine Optimization"* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, & Deshpande), presented at **KDD 2024** — [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900). That study was the first to show, in a controlled experiment, that content can be deliberately optimized for higher visibility in AI‑generated answers, reporting visibility gains of **up to 40%** from content‑level signals such as citing sources, adding statistics, and quoting credible authorities.
 
+## GEO ID Card
+
+The machine-readable version of this table is [`about.jsonld`](about.jsonld) (schema.org JSON-LD). That file is the source of truth; this table mirrors it field by field.
+
+| Field | Value |
+|---|---|
+| Type | `CreativeWork` — *The GEO Handbook* |
+| Creator | Fernando Aporta Franco (ferinazumaDEV) · sameAs: [github.com/ferinazumaDEV](https://github.com/ferinazumaDEV), [zentimes.es](https://zentimes.es) |
+| Abstract | A comprehensive, sourced reference on Generative Engine Optimization (GEO): structuring, writing, and publishing content so it is understood, trusted, and cited by generative AI answer engines. |
+| Based on | [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) — Aggarwal et al., *GEO: Generative Engine Optimization*, KDD 2024 |
+| Sources | Work-level citation: [arXiv:2311.09735](https://arxiv.org/abs/2311.09735). Every chapter lists its own sources, primary ones first; secondary (industry) sources are labelled as such |
+| Cite as | DOI [10.5281/zenodo.22299644](https://doi.org/10.5281/zenodo.22299644) (concept DOI, always the latest release) — [`CITATION.cff`](CITATION.cff) |
+| Canonical URL | <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook> |
+| License | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Version | 0.1.1 |
+| Published | 2026-08-25 |
+| Last modified | 2026-09-04 |
+| Maturity | see [CLAIMS.md](CLAIMS.md) |
+
 ---
 
 ## Why this exists
