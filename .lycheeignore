@@ -21,3 +21,15 @@ globenewswire\.com
 # Alive and fast for a reader; unreachable from CI datacenter IPs. Two runs in a
 # row failed the whole check on this one host while the other 989 links passed.
 aitoolkitpro\.blog
+
+# almcorp.com: same signature as aitoolkitpro.blog below — two consecutive runs
+# failed on this one host (timeout, then timeout + cached error) while the other
+# 987 links passed. Verified by hand 2026-09-04 from a normal client: three
+# consecutive requests, HTTP 200 in ~1.7s each, correct article. Alive for a
+# reader, unreachable from CI datacenter IPs.
+# NOTE: this is the second "industry source" blog in one day to behave this way.
+# The claim it supports — that Claude returns structured citations with clickable
+# source URLs — is observable product behaviour, and the plan is to replace it
+# with a dated first-hand observation. Ignoring the link keeps CI honest in the
+# meantime; it does not make the citation stronger.
+almcorp\.com
