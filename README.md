@@ -79,7 +79,7 @@ This handbook is the reference hub of a cluster of open work by **ferinazumaDEV*
 - **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the reproducible companion: a `before/` and an `after/` for each technique in this handbook, with the measurement and a one-command script.
 - **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the input side: a ledger grading techniques `solid` / `mixed` / `folklore`, with a primary source per entry.
 - **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — a token-efficient "second brain" for AI agents (local memory + NotebookLM + knowledge routing); the practical companion to keeping a citable, machine-readable corpus.
-- **[structllm](https://github.com/ferinazumaDEV/structllm)** — reliable structured output from any LLM (schema-validated JSON, tolerant repair, retries).
+- **[typedout](https://github.com/ferinazumaDEV/typedout)** — reliable structured output from any LLM (schema-validated JSON, tolerant repair, retries).
 - **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a careful, well-behaved HTTP client for Python (retries, per-host rate-limiting, caching): the well-behaved way to crawl.
 - **[scaffld](https://github.com/ferinazumaDEV/scaffld)** · **[webhook-replay](https://github.com/ferinazumaDEV/webhook-replay)** · **[framesig](https://github.com/ferinazumaDEV/framesig)** — more open developer tooling from the same author.
 - **Hub & writing:** **[zentimes.es](https://zentimes.es)** — including *[Measured, Not Claimed](https://zentimes.es/experiments/)*, a write-up of the cookbook's six measurements with what each one does **not** prove.
