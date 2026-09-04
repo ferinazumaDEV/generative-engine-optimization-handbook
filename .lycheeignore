@@ -14,3 +14,10 @@ businesswire\.com
 # Verified by hand 2026-09-03: the cited URL returns HTTP 200 with the right
 # article title in a real browser. Anti-bot artifact, not a dead link.
 globenewswire\.com
+
+# aitoolkitpro.blog: times out for GitHub Actions runners, and once errored on a
+# cached failure from the same run. Verified by hand 2026-09-04 from a normal
+# client — three consecutive requests, HTTP 200 in ~1.7s each, correct article.
+# Alive and fast for a reader; unreachable from CI datacenter IPs. Two runs in a
+# row failed the whole check on this one host while the other 989 links passed.
+aitoolkitpro\.blog
