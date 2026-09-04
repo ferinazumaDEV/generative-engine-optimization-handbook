@@ -2,11 +2,11 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22299644.svg)](https://doi.org/10.5281/zenodo.22299644)
 
-**Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every single claim carries a real, verifiable source**.
+**Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every claim carries a real, verifiable source or an explicit needs-verification flag**.
 
 > **Generative Engine Optimization (GEO)** is the practice of structuring, writing, and publishing content so that it is understood, trusted, and **cited by generative AI engines** — such as ChatGPT, Perplexity, Google AI Overviews / AI Mode, Gemini, and Copilot — when they answer a user's question.
 
-The term was coined in the peer-reviewed paper *"GEO: Generative Engine Optimization"* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, & Deshpande), presented at **KDD 2024** — [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900). That study was the first to show, in a controlled experiment, that content can be deliberately optimized for higher visibility in AI‑generated answers, reporting visibility gains of **up to 40%** from content‑level signals such as citing sources, adding statistics, and quoting credible authorities.
+The term was coined in the peer-reviewed paper *"GEO: Generative Engine Optimization"* (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, & Deshpande), presented at **KDD 2024** — [arXiv:2311.09735](https://arxiv.org/abs/2311.09735) · [DOI:10.1145/3637528.3671900](https://doi.org/10.1145/3637528.3671900). That study was the first to show, in a controlled experiment, that content can be deliberately optimized for higher visibility in AI‑generated answers, reporting visibility gains of **up to 40%** from content‑level signals such as citing sources, adding statistics, and quoting credible authorities (the best method on the best metric, measured on a GPT‑3.5‑era engine in 2023–24 — a ceiling, not an average; see [07 · Research](docs/07-research-cases.md)).
 
 ## GEO ID Card
 
@@ -55,7 +55,7 @@ This handbook is a **free, public, community-maintained reference** on how gener
 | 08 | [Future & Ethics](docs/08-future-ethics.md) | Where GEO is heading, prompt/answer manipulation risks, disclosure, and doing this responsibly |
 | 09 | [Glossary](docs/09-glossary.md) | Plain-language definitions of every term used across the handbook |
 
-> All nine chapters are written and cited (100+ primary sources, cited throughout). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
+> All nine chapters are written and cited (100+ sources cited throughout — primary where available, secondary ones labelled). They are living documents kept current every week — [contributions and corrections welcome](CONTRIBUTING.md).
 
 ---
 
