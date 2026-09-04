@@ -91,6 +91,8 @@ Their best content interventions improved visibility by **up to ~40%** (specific
 
 Two follow-on 2026 papers extend the measurement frame and are worth a read for method: **["From Citation Selection to Citation Absorption"](https://arxiv.org/abs/2604.25707)** (measuring when your *facts* survive into the answer even without a link) and **["AI Answer Engine Citation Behavior: the GEO16 Framework"](https://arxiv.org/abs/2509.10762)**. `⚠️ These are recent preprints — cite the specific version and check for peer-review status before treating conclusions as settled.`
 
+> **▶ Reproducible example.** The cookbook has a runnable before/after for the document-side precondition of attribution — the *same* eight claims written unsourced vs with an inline linkable source next to each, measured at **0 of 8 claim→source pairs a parser can extract vs 8 of 8**. It is an offline extractability proxy (N = 8 claims in one document; it does not measure whether an engine actually cites or absorbs them). Clone it and run `reproduce.sh`: [`06-measurement/citation-anchoring`](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook/tree/main/06-measurement/citation-anchoring).
+
 ---
 
 ## Layer 1 — The answer layer (prompt-set testing)

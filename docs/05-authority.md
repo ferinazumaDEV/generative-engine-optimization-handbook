@@ -161,6 +161,8 @@ These are widely recommended and mechanism-sound. Their *direction* is solid; sp
 - **State your facts consistently and machine-readably.** Founding date, founders, location, category, what you do — stated the same way across your About page, structured data, and third-party profiles — is how an engine builds a stable, corroborated picture of you.
 - **Feed real co-occurrence.** Every time your brand appears near its core topics in trusted text (Mechanism 3), the entity ↔ topic association strengthens. This is where entities and digital PR meet.
 
+> **▶ Reproducible example.** The cookbook has a runnable before/after for this exact technique — the *same* article naming five genuinely ambiguous entities (Michael Jordan, Apple, Python, Amazon, Paris) as bare names vs with `sameAs` links to Wikidata and Wikipedia, measured at **0 of 5 entities resolved to a single canonical Wikidata ID vs 5 of 5**. It is an offline resolvability proxy (N = 5 entities; it does not measure citation, and it checks that each anchor is unique, not that the Q-ID is the right item). Clone it and run `reproduce.sh`: [`05-authority/entity-clarity-sameas`](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook/tree/main/05-authority/entity-clarity-sameas).
+
 > ⚠️ **On the eye-catching entity stats.** You'll see claims like *"knowledge-panel appearance in 60–180 days"*, *"AI-citation lift in 90–120 days"*, or *"76.95% of AI-cited URLs rank outside the organic top-10."* Some are directionally plausible (yes, AI cites plenty of pages that *don't* rank #1), but they come from single-vendor analyses with undisclosed methods. **Use the practice, not the promised timeline.** Cite these only with the vendor named and a `needs verification` flag.
 
 ---
