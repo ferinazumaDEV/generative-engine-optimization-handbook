@@ -168,7 +168,7 @@ Google is a special case because one crawler feeds several products, and the con
 
 ### Google-Extended ≠ AI Overviews
 
-- **`Google-Extended`** is a **robots.txt token only — it has no separate crawler and makes no HTTP requests.** It controls whether your already-crawled content may be used to **train future Gemini models** and for **grounding** (feeding Search-index content to Gemini at prompt time). Google states plainly: *"Google-Extended does not impact a site's inclusion in Google Search nor is it used as a ranking signal"* ([Google](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers)).
+- **`Google-Extended`** is a **robots.txt token only — it has no separate crawler and makes no HTTP requests.** It controls whether your already-crawled content may be used to **train future Gemini models** and for **grounding** (feeding Search-index content to Gemini at prompt time). Google enumerates four destinations for that token — training the Gemini models that power **Gemini Apps** and the **Vertex AI API for Gemini**, plus grounding in **Gemini Apps** and **Grounding with Google Search on Vertex AI** — so its reach covers Vertex AI, not just the consumer Gemini app. Google states plainly: *"Google-Extended does not impact a site's inclusion in Google Search nor is it used as a ranking signal in Google Search"* ([Google, updated 2026-07-14](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers)).
 - **AI Overviews and AI Mode are served from the normal Google Search index, crawled by `Googlebot`.** So **blocking `Google-Extended` does *not* remove you from AI Overviews.** The only ways to affect AI Overview *display* have historically been blunt: block `Googlebot` (you leave Search entirely) or use snippet controls (below).
 
 This is the trap: teams block `Google-Extended` believing they've opted out of Google's AI answers, and are surprised to still appear in AI Overviews. The token they wanted governs *training*, not *the answer box*.
@@ -286,7 +286,7 @@ It is explicitly **not** `sitemap.xml` (which lists *every* URL for crawlers) an
 
 ### Adoption status — read this before you promise anyone results
 
-> ⚠️ **As of 2026-08, no major AI engine has publicly confirmed that it reads or acts on `llms.txt` for retrieval, ranking, or citation.** Google's Search team (via public comments from **Gary Illyes / John Mueller**) has said it does **not** use or support it. OpenAI, Anthropic, and Perplexity do **not** document it as a visibility or citation signal.
+> ⚠️ **As of 2026-08, no major AI engine has publicly confirmed that it reads or acts on `llms.txt` for retrieval, ranking, or citation.** Google's Search team (via public comments from **Gary Illyes / John Mueller**) has said it does **not** use or support it — and Google's *written* documentation says the same thing in a primary, citable form: *"You don't need to create new machine readable files, AI text files, or markup to appear in these features. There's also no special schema.org structured data that you need to add."* ([Google Search Central, *AI features and your website*, updated 2025-12-10](https://developers.google.com/search/docs/appearance/ai-features)). OpenAI, Anthropic, and Perplexity do **not** document it as a visibility or citation signal.
 
 The evidence:
 
