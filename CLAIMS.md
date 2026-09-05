@@ -60,7 +60,7 @@ Each row was checked against the primary source named. A claim not in this table
 
 ## Work-level maturity
 
-**Proposed, pending the owner's confirmation; not yet set in `about.jsonld`.** The proposal is `maturity: mixed`, `reproducible: no`. The handbook's central claim — that GEO techniques change what gets cited — has controlled evidence for content-level signals (row 1) and against formatting-only edits (row 2), and no live-engine measurement in this cluster. What is reproducible lives in the Cookbook (rows 6–11). Until `additionalProperty` is set in `about.jsonld`, the README ID card reads "see CLAIMS.md".
+**Set in `about.jsonld` on 5 September 2026: `maturity: mixed`, `reproducible: no`.** The handbook's central claim — that GEO techniques change what gets cited — has controlled evidence for content-level signals (row 1) and against formatting-only edits (row 2), and no live-engine measurement in this cluster. What is reproducible lives in the Cookbook (rows 6–11).
 
 ## Changing a grade
 

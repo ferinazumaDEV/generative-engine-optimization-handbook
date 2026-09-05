@@ -32,7 +32,11 @@
       "sameAs": ["https://doi.org/10.5281/zenodo.22299644"],
       "version": "0.1.1",
       "datePublished": "2026-08-25",
-      "dateModified": "2026-09-04"
+      "dateModified": "2026-09-04",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "maturity", "value": "mixed" },
+        { "@type": "PropertyValue", "name": "reproducible", "value": "no" }
+      ]
     }
   ]
 }

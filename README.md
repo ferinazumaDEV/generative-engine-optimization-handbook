@@ -25,7 +25,7 @@ The machine-readable version of this table is [`about.jsonld`](about.jsonld) (sc
 | Version | 0.1.1 |
 | Published | 2026-08-25 |
 | Last modified | 2026-09-04 |
-| Maturity | see [CLAIMS.md](CLAIMS.md) |
+| Maturity | `mixed` · reproducible: `no` — see [CLAIMS.md](CLAIMS.md) |
 
 ---
 
