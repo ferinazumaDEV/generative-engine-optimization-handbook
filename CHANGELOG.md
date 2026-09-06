@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.2] — 2026-09-06
+
+The archived copy had fallen behind. `v0.1.1` was tagged on 4 September and eight
+commits landed after it — including every correction below. So the Zenodo deposit
+people were citing still contained the quotation attributed to Microsoft that
+appears in none of the cited sources, the unsupported request-volume figure, and
+the wording that promised a primary source for every claim. Those were fixed in
+the repository on the 4th and remained in the archive until now.
+
 ### Added
 
 - **[`CLAIMS.md`](CLAIMS.md)** — the maturity vocabulary (`established` / `mixed` / `experimental` / `folklore`, plus `reproducible`; `solid` == `established` as in the sibling ledger), the mapping from the markers the chapters already use, and a graded table of the twelve claims the handbook rests on.
