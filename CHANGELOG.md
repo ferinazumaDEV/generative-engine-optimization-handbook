@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- **Weekly landscape entry: [`updates/2026-W37.md`](updates/2026-W37.md)** — covering 31 Aug – 6 Sep 2026. Google's AI-features opt-out control going worldwide, the Perplexity Sonar deadline holding at 27 Sep, GPT-6 Astra, ChatGPT Ads at a $1B run rate, Perplexity's Hybrid Compute moving agent steps off the network, and Ahrefs' 3M-query citation-share snapshot. Includes a **negative-findings** section (Reddit's `robots.txt` never changed; no new evidence on the ChatGPT `site:` fan-out story) and an explicit **coverage-and-gaps** note naming what was not swept.
+
+### Changed
+
+- **`04 · Technical GEO`** — the **Search generative AI control** reached **all websites worldwide on 31 August 2026**, so the section no longer carries the "geo-limited at launch, verify before relying on it" warning. Google's own wording is quoted on both halves of the trade-off: the control *"isn't used as a ranking or inclusion signal affecting other parts of Search"*, but opting out means *"You won't receive any traffic or impressions from these features."* The June UK-first history is retained.
+- **`02 · The Engines`** — added the worldwide **Search generative AI control** and the Search Console **AI performance report** (no click data) to Google's publisher-controls list.
+
 ## [0.1.2] — 2026-09-06
 
 The archived copy had fallen behind. `v0.1.1` was tagged on 4 September and eight
