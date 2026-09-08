@@ -1,3 +1,5 @@
+<!-- synced-from: bb01ec297d9e90fcafb1de784064929b7c0d0c56 -->
+
 # The GEO Handbook
 
 **Español** · [English](README.md)
