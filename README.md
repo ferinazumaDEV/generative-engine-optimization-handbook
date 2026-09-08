@@ -1,5 +1,7 @@
 # The GEO Handbook
 
+[English](README.md) · **Español**: [README.es.md](README.es.md)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22299644.svg)](https://doi.org/10.5281/zenodo.22299644)
 
 **Everything about Generative Engine Optimization, in one place.** From *"what is GEO and where do I start?"* all the way to the technical checklist, the measurement method, and the primary research — whatever you need to get your content understood and **cited by AI answer engines** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot), you'll find it here. Beginner to practitioner, and **every claim carries a real, verifiable source or an explicit needs-verification flag**.
