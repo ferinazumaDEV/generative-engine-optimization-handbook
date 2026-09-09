@@ -34,22 +34,3 @@ aitoolkitpro\.blog
 # meantime; it does not make the citation stronger.
 almcorp\.com
 
-# zenodo.org: the DOI badge and the three "cite this work" links. Two runs in a
-# row failed the whole check on this one host (2026-09-08, both on
-# docs/readme-bilingue) while every other link passed; the same four links
-# passed on main on 2026-09-06, so this is intermittent, not link-rot.
-#
-# Verified by hand 2026-09-08 from a residential connection (not a datacenter
-# IP): https://doi.org/10.5281/zenodo.22299644 resolves 200 in ~2.2s, three
-# consecutive requests, landing on zenodo.org/records/22548649; the badge
-# returns a real image/svg+xml in 0.7s. From this project's own GCE box the DOI
-# resolver answers 302 in 0.17s and the hop to zenodo.org then times out with
-# zero bytes — the same datacenter-IP signature as the two blogs above.
-#
-# NOTE: ignoring these is the weaker of the two fixes. zenodo.org is CERN-hosted
-# and answers slowly; raising lychee's 20s default (--timeout 30
-# --retry-wait-time 5) would keep checking the most load-bearing links in a
-# repository whose whole point is citability. That change touches
-# .github/workflows/links.yml, which needs Fernando's explicit OK, so it is a
-# proposal and not done here.
-zenodo\.org
