@@ -34,22 +34,22 @@ aitoolkitpro\.blog
 # meantime; it does not make the citation stronger.
 almcorp\.com
 
-# zenodo.org: the DOI badge and the three "cite this work" links. Two runs in a
-# row failed the whole check on this one host (2026-09-08, both on
-# docs/readme-bilingue) while every other link passed; the same four links
-# passed on main on 2026-09-06, so this is intermittent, not link-rot.
+
+# zenodo.org/badge/... — the DOI *badge image*, and only that. Not the DOI.
 #
-# Verified by hand 2026-09-08 from a residential connection (not a datacenter
-# IP): https://doi.org/10.5281/zenodo.22299644 resolves 200 in ~2.2s, three
-# consecutive requests, landing on zenodo.org/records/22548649; the badge
-# returns a real image/svg+xml in 0.7s. From this project's own GCE box the DOI
-# resolver answers 302 in 0.17s and the hop to zenodo.org then times out with
-# zero bytes — the same datacenter-IP signature as the two blogs above.
+# With --timeout 30 the citation links now pass: 217 of 219 links green, and
+# the only failure left is this one SVG, which times out even at 30s from a
+# GitHub runner while returning 200 in 0.7s from a residential connection
+# (verified by hand 2026-09-09). Zenodo renders these badges on demand and the
+# endpoint is slow from datacenter IPs.
 #
-# NOTE: ignoring these is the weaker of the two fixes. zenodo.org is CERN-hosted
-# and answers slowly; raising lychee's 20s default (--timeout 30
-# --retry-wait-time 5) would keep checking the most load-bearing links in a
-# repository whose whole point is citability. That change touches
-# .github/workflows/links.yml, which needs Fernando's explicit OK, so it is a
-# proposal and not done here.
-zenodo\.org
+# The distinction that makes this safe: this URL is a decorative image. The DOI
+# it links to — https://doi.org/10.5281/zenodo.* — is a separate link in the
+# same line of the README, it is NOT ignored, and it is checked on every run.
+# If the DOI ever breaks, CI still says so. If the badge endpoint has a bad
+# day, the reader sees a broken image next to a working citation link.
+#
+# Deliberately narrow: the path prefix, not the host. A bare zenodo\.org would
+# also silence the record pages, which is exactly what this repository must
+# keep checking.
+zenodo\.org/badge/
