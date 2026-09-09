@@ -1,4 +1,4 @@
-<!-- synced-from: bb01ec297d9e90fcafb1de784064929b7c0d0c56 -->
+<!-- synced-from: 9dc8495e6f735d88da97268d6eb342baccaee4c9 -->
 
 # The GEO Handbook
 
