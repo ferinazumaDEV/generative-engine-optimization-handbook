@@ -48,14 +48,48 @@ jobs:
           REQ="$(jq -n --arg m "$MODEL" --arg s "$SYSTEM" --arg u "$USER" \
             '{model:$m, max_tokens:1024, system:$s, messages:[{role:"user", content:$u}]}')"
 
-          # 3) Call the Anthropic API.
-          RESP="$(curl -sS https://api.anthropic.com/v1/messages \
+          # 3) Call the Anthropic API, keeping the HTTP status.
+          HTTP="$(curl -sS -o resp.json -w '%{http_code}' https://api.anthropic.com/v1/messages \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
             -H "anthropic-version: 2023-06-01" \
             -H "content-type: application/json" \
-            -d "$REQ")"
-          BODY="$(printf '%s' "$RESP" | jq -r '.content[0].text // .error.message // "AI review produced no output."')"
+            -d "$REQ")" || HTTP="000"
 
-          # 4) Post the notes as a PR comment (advisory).
+          # 4) Read EVERY text block, not just the first one.
+          #
+          # This used to be `.content[0].text // .error.message // "<fallback>"`, and
+          # it silently produced the fallback on every run for weeks while the check
+          # still reported success. Two shapes defeat it: a response whose first
+          # block is not of type "text", and an empty `content` array. Neither is an
+          # error, so `.error.message` does not catch them either.
+          #
+          # A reviewer that did not review must not look like a reviewer that found
+          # nothing wrong. So: collect all text blocks, and if there are none, say
+          # loudly what happened and FAIL the job. `ai-review` is advisory and is not
+          # a required status check, so a red here blocks nobody -- it is simply
+          # visible, which is the whole point.
+          BODY="$(jq -r '
+            ([.content[]? | select(.type == "text") | .text] | join("\n\n")) as $text
+            | if ($text | length) > 0 then $text else "" end
+          ' resp.json 2>/dev/null || true)"
+
+          if [ -z "$BODY" ]; then
+            REASON="$(jq -r '.error.message // "the response carried no text block"' resp.json 2>/dev/null || echo "the response was not valid JSON")"
+            # jq exits 0 on empty input and prints nothing, so the `||` above never
+            # fires for an empty body -- which is exactly what a dropped connection
+            # looks like. Without this the comment would say "HTTP 000 -- " and stop.
+            [ -n "$REASON" ] || REASON="the response was empty"
+            printf '%s\n' \
+              '⚠️ **AI citation review did not run.**' \
+              '' \
+              "HTTP status \`$HTTP\` — $REASON" \
+              '' \
+              'This comment is not a pass. Nothing in this pull request was checked for unsourced claims or fabricated citations. Review the added lines by hand, or re-run this job once the cause is fixed.' \
+              | gh pr comment "$PR" --repo "$REPO" --body-file - || true
+            echo "::error::AI citation review produced no text (HTTP $HTTP). Failing so this is visible."
+            exit 1
+          fi
+
+          # 5) Post the notes as a PR comment (advisory).
           printf '🤖 **AI citation review** — advisory only; a human still reviews and approves.\n\n%s\n' "$BODY" \
             | gh pr comment "$PR" --repo "$REPO" --body-file -
