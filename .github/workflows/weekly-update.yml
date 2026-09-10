@@ -26,5 +26,24 @@ jobs:
             echo "Issue for $WEEK already exists — nothing to do."
             exit 0
           fi
-          BODY=$'Weekly cadence checklist (see `updates/README.md`):\n\n- [ ] Scan what changed in the GEO landscape this week (engines, citation behavior, new controls).\n- [ ] Add a dated log entry under `updates/` (e.g. `updates/'"$WEEK"'.md`).\n- [ ] Update any chapter whose facts moved — keep every claim cited.\n- [ ] Review open PRs & issues (new techniques, corrections).\n- [ ] Bump `CHANGELOG.md` if there was a notable change.\n\n_Opened automatically to keep the weekly rhythm._'
+          # One argument per line, joined by printf. The previous version built the
+          # body as BODY=$'...\n...' and interpolated "$WEEK" in the middle, which
+          # ended that ANSI-C quoted string: everything after the week number sat in
+          # ordinary single quotes, where \n is two literal characters. The issues
+          # came out with "\n" printed from the second checklist item onward.
+          #
+          # printf '%s\n' takes the escaping problem away entirely -- no escape
+          # sequences to preserve, and no heredoc, which cannot be indented inside a
+          # YAML block scalar without either breaking the YAML or indenting the
+          # Markdown into a code block.
+          BODY="$(printf '%s\n' \
+            'Weekly cadence checklist (see `updates/README.md`):' \
+            '' \
+            '- [ ] Scan what changed in the GEO landscape this week (engines, citation behavior, new controls).' \
+            "- [ ] Add a dated log entry under \`updates/\` (e.g. \`updates/$WEEK.md\`)." \
+            '- [ ] Update any chapter whose facts moved — keep every claim cited.' \
+            '- [ ] Review open PRs & issues (new techniques, corrections).' \
+            '- [ ] Bump `CHANGELOG.md` if there was a notable change.' \
+            '' \
+            '_Opened automatically to keep the weekly rhythm._')"
           gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --label weekly-update --body "$BODY"
