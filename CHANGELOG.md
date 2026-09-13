@@ -8,10 +8,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **[`docs/protocols/minor-engines-citations.md`](docs/protocols/minor-engines-citations.md)** — a
+  one-pass observation protocol for inline citations in the smaller answer engines, and its first
+  run (2026-09-13): Brave Search's AI answer showed inline citation markers on 6 of 6 fixed queries;
+  You.com (sign-in wall in a clean session), Arc (no Linux client) and Claude (account required)
+  were not observed and are said to be not observed. One screenshot, timestamps, limits.
 - **Weekly landscape entry: [`updates/2026-W37.md`](updates/2026-W37.md)** — covering 31 Aug – 6 Sep 2026. Google's AI-features opt-out control going worldwide, the Perplexity Sonar deadline holding at 27 Sep, GPT-6 Astra, ChatGPT Ads at a $1B run rate, Perplexity's Hybrid Compute moving agent steps off the network, and Ahrefs' 3M-query citation-share snapshot. Includes a **negative-findings** section (Reddit's `robots.txt` never changed; no new evidence on the ChatGPT `site:` fan-out story) and an explicit **coverage-and-gaps** note naming what was not swept.
 
 ### Changed
 
+- **`02 · The Engines`** — the *You.com / Brave / Arc* line no longer rests on a comparison blog: it
+  states what the protocol above observed, with date and scope, and names what could not be observed.
+  Claude's *structured citations with clickable source URLs* are now sourced to Anthropic's own web
+  search tool documentation (primary) instead of an industry blog. Both blogs leave the sources list.
 - **`04 · Technical GEO`** — the **Search generative AI control** reached **all websites worldwide on 31 August 2026**, so the section no longer carries the "geo-limited at launch, verify before relying on it" warning. Google's own wording is quoted on both halves of the trade-off: the control *"isn't used as a ranking or inclusion signal affecting other parts of Search"*, but opting out means *"You won't receive any traffic or impressions from these features."* The June UK-first history is retained.
 - **`02 · The Engines`** — added the worldwide **Search generative AI control** and the Search Console **AI performance report** (no click data) to Google's publisher-controls list.
 
