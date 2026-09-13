@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.3] — 2026-09-13
+
 ### Added
 
 - **[`docs/protocols/minor-engines-citations.md`](docs/protocols/minor-engines-citations.md)** — a
