@@ -1,4 +1,4 @@
-<!-- synced-from: 9dc8495e6f735d88da97268d6eb342baccaee4c9 -->
+<!-- synced-from: feacbc89081203fce18c7ef91bbea97442fd1dd9 -->
 
 # The GEO Handbook
 
@@ -6,7 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22299644.svg)](https://doi.org/10.5281/zenodo.22299644)
 
-**Todo sobre la optimización para motores generativos, en un solo sitio.** Desde *«¿qué es GEO y por dónde empiezo?»* hasta la lista técnica, el método de medición y la investigación primaria — lo que necesites para que tu contenido lo entiendan y lo **citen los motores de respuesta de IA** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) está aquí. De principiante a profesional, y **cada afirmación lleva una fuente real y verificable, o una marca explícita de que está pendiente de verificar**.
+**Todo sobre la optimización para motores generativos, en un solo sitio.** Desde *«¿qué es GEO y por dónde empiezo?»* hasta la lista técnica, el método de medición y la investigación primaria — lo que necesites para que tu contenido lo entiendan y lo **citen los motores de respuesta de IA** (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) está aquí. De principiante a profesional, y **cada afirmación lleva una fuente, o una marca explícita de que está pendiente de verificar** — la CI comprueba la tabla de afirmaciones graduadas ([`CLAIMS.md`](CLAIMS.md)) y todos los enlaces, no cada frase.
 
 > La **optimización para motores generativos** (*generative engine optimization*, GEO) es la práctica de estructurar, escribir y publicar contenido para que los motores generativos de IA —ChatGPT, Perplexity, Google AI Overviews / AI Mode, Gemini y Copilot— lo entiendan, se fíen de él y **lo citen** al responder a alguien.
 
