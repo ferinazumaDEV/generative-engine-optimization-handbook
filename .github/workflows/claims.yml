@@ -1,0 +1,30 @@
+name: claims
+
+# The handbook's promise is "every claim carries a source or a needs-verification
+# flag". This is the part of that promise CI can actually check: the graded
+# claims table in CLAIMS.md (a grade from the vocabulary, a primary source that
+# is a URL / DOI / row reference, a limitation), the Cookbook recipes it names,
+# and that about.jsonld declares the same work-level maturity CLAIMS.md states.
+# It does not read every sentence of every chapter, and the README says so.
+
+on:
+  push:
+    branches: [main]
+    paths: ['CLAIMS.md', 'about.jsonld', 'docs/**', 'scripts/check-claims.py', '.github/workflows/claims.yml']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.12"
+      - name: The graded claims table, the Cookbook recipes it names and about.jsonld agree
+        run: python3 scripts/check-claims.py
