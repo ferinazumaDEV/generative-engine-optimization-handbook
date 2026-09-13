@@ -75,6 +75,16 @@ jobs:
 
           if [ -z "$BODY" ]; then
             REASON="$(jq -r '.error.message // "the response carried no text block"' resp.json 2>/dev/null || echo "the response was not valid JSON")"
+            # What DID come back. Three times on 2026-09-13 the answer was 200 with no text
+            # block, all on documentation-heavy pull requests, and "no text" was all the
+            # log said. stop_reason and the block types name the cause (a refusal, a
+            # max_tokens cut on a non-text block, an empty content array); the raw
+            # response is kept as an artifact. It contains no secret: the request is
+            # not echoed and the diff is public.
+            SHAPE="$(jq -c '{stop_reason, blocks: [.content[]?.type], usage: {in: .usage.input_tokens, out: .usage.output_tokens}}' resp.json 2>/dev/null || echo '{"unparseable": true}')"
+            echo "::group::response shape"; echo "$SHAPE"; echo "::endgroup::"
+            REASON="$REASON — response shape: \`$SHAPE\`"
+            cp resp.json "$RUNNER_TEMP/ai-review-resp.json" || true
             # jq exits 0 on empty input and prints nothing, so the `||` above never
             # fires for an empty body -- which is exactly what a dropped connection
             # looks like. Without this the comment would say "HTTP 000 -- " and stop.
@@ -93,3 +103,12 @@ jobs:
           # 5) Post the notes as a PR comment (advisory).
           printf '🤖 **AI citation review** — advisory only; a human still reviews and approves.\n\n%s\n' "$BODY" \
             | gh pr comment "$PR" --repo "$REPO" --body-file -
+
+      - name: Keep the raw API response for diagnosis
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ai-review-response
+          path: ${{ runner.temp }}/ai-review-resp.json
+          if-no-files-found: ignore
+          retention-days: 14
