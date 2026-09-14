@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **`04 · Technical GEO`** — **dated correction** under the Cloudflare 15 Sep 2026 note: the chapter said existing domains keep their settings; Cloudflare's press release says *"all existing free customers that have not changed their settings"* are moved to the new defaults too. Both Cloudflare texts quoted verbatim, including the Googlebot / Applebot / BingBot sentence; original paragraph retained.
 - **`02 · The Engines`** — Google: PAA ≈ AI Overviews (vendor data, labelled) and citation display as a per-model property that can regress; ChatGPT: the vertical-connector pattern (health → finance) and the Amazon DSP ad pilot with OpenAI's stated control over placement; Perplexity: the Sonar retirement date and Q2D-Web.
 
+### Fixed
+
+- **`pr-review.yml`** — the AI citation review no longer returns "200 with no text" on large docs PRs. The diagnostics added in #29 showed the cause on the first failing run they saw: `stop_reason: max_tokens` with a single `thinking` block — the model thinks by default and a 1024-token budget was spent before any text. Thinking is now disabled for the review and the budget is 4096.
+
 ## [0.1.3] — 2026-09-13
 
 ### Added
