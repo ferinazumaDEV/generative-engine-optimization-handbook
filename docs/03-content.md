@@ -154,7 +154,7 @@ The honest takeaway: **the list format is genuinely extractable, but self-servin
 
 People don't talk to assistants the way they type into Google. Where a Google query is a terse keyword fragment ("pizza near me"), a prompt to ChatGPT is usually a full, contextual sentence. SimilarWeb's 2025 GenAI Landscape report measured ChatGPT prompts at roughly **17× the length of Google searches** (and ~6× longer than Google's AI Mode) ([SimilarWeb 2025, via OfficeChai](https://officechai.com/ai/chatgpt-queries-17x-longer-than-google-searches-6x-longer-than-googles-ai-mode-similarweb-data/)).
 
-> ⚠️ The *exact* unit is reported inconsistently across write-ups (characters vs. words, and figures like "60 characters" vs. "5.48 words" appear in secondary coverage). The robust, directional fact — **AI prompts are far longer and more conversational than keyword searches** — is not in dispute; treat any single precise word/character count as `needs verification`.
+> ⚠️ The unit is reported inconsistently in secondary write-ups (characters vs. words; "60 characters" and "5.48 words" both circulate). Similarweb's own statement is in **words**: *"The average ChatGPT prompt runs about 60 words; the average Google search runs 3.4, according to Similareweb's* [sic] *2025 Generative AI Landscape report"* ([Similarweb blog, 2026-05-05](https://aisearch.similarweb.com/blog/prompt-research/); the report itself is a gated download, [*From Platforms to Pathways*](https://www.similarweb.com/corp/reports/2025-generative-ai-landscape/)). The robust, directional fact — **AI prompts are far longer and more conversational than keyword searches** — is not in dispute; treat any *other* precise count as `needs verification`.
 
 What to do with that:
 

@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **`02 · The Engines`, `03 · Content`, `07 · Research & Cases`, `08 · Future & Ethics`** — five `needs verification` markers replaced by primary sources fetched 2026-09-14 (crawler table re-verified and dated, Meta's three AI-relevant tokens added; Similarweb's own 60-vs-3.4-words statement; AI Act Art. 50 application date 2 August 2026 via Art. 113); the DeepSeek marker now records what was searched. (#30)
 - **`04 · Technical GEO`** — **dated correction** under the Cloudflare 15 Sep 2026 note: the chapter said existing domains keep their settings; Cloudflare's press release says *"all existing free customers that have not changed their settings"* are moved to the new defaults too. Both Cloudflare texts quoted verbatim, including the Googlebot / Applebot / BingBot sentence; original paragraph retained.
 - **`02 · The Engines`** — Google: PAA ≈ AI Overviews (vendor data, labelled) and citation display as a per-model property that can regress; ChatGPT: the vertical-connector pattern (health → finance) and the Amazon DSP ad pilot with OpenAI's stated control over placement; Perplexity: the Sonar retirement date and Q2D-Web.
 
