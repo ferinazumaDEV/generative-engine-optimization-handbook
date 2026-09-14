@@ -238,6 +238,10 @@ On **2026-06-03**, Google launched dedicated **Generative AI performance reports
 
 Use it as a **diagnostic lens** (where does Google surface me in AI?), not a scoreboard. `⚠️ This report is new and evolving — Google has said it's still deciding which metrics to add; re-check current capabilities in the GSC docs.`
 
+**Merchant Center: AI performance insights for products (added 2026-09-14).** For product pages Google now exposes something Search Console's AI report still does not: **the language of the AI queries**. Merchant Center's *AI performance insights* cover **AI Mode and AI Overviews** and add **Top search intents** (*"the context behind conversational queries, moving beyond keywords to reveal the underlying shopper intent"*), **Top terms** (*"search terms within a product category that shoppers are actively prioritizing in their conversational queries"*) and **Popular attributes** (*"structured technical specifications customers look for, such as Size, Color, or Material, that may be missing from your product data sources"*) ([Google Merchant Center Help](https://support.google.com/merchants/answer/17200695?hl=en); rollout noticed 9 Sep 2026 — [Search Engine Roundtable](https://www.seroundtable.com/google-merchant-center-ai-performance-new-42043.html)). It is feed-level, product-only and impressions-side — but it is the first first-party Google surface that shows *what people asked* an AI feature. If you sell products, mine it for the prompt set used in the visibility layer above.
+
+**An API deadline that breaks pipelines (added 2026-09-14).** If your tracking calls Perplexity's `sonar`/`sonar-pro` chat completions, they stop on **27 Sep 2026**; migrate to the Agent API responses endpoint and **re-baseline** your citation counts, because a different endpoint is not guaranteed to retrieve or cite identically ([Perplexity API forum, staff reply 10 Sep 2026](https://community.perplexity.ai/t/sonar-moving-to-agents-api/6061) · [migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)).
+
 ---
 
 ## The 2026 GEO tool landscape

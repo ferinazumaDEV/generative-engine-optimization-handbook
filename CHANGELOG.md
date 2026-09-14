@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- **Weekly landscape entry: [`updates/2026-W38.md`](updates/2026-W38.md)** — covering 7–13 Sep 2026: Cloudflare's 15 Sep crawler default reaching untouched Free-plan zones (a correction to what the handbook said), "People also ask" answers now ≈ AI Overviews, the AI Mode citation regression on Gemini 3.8 Flash, Merchant Center AI performance insights, ChatGPT for Financial Services, the Amazon DSP ad pilot in ChatGPT, Perplexity's Sonar deadline reconfirmed and its Q2D-Web benchmark, three GEO preprints, Semrush's manufacturing study, Le Monde's audience figures, the DOJ statement of interest. Includes **negative findings** and a **coverage-and-gaps** note.
+- **`07 · Research & Cases`** — three September 2026 preprints logged under the honesty note, each with its caveat (vendor-affiliated / vendor-released / simulation-only).
+- **`06 · Measurement`** — Merchant Center *AI performance insights* (top search intents, top terms, popular attributes for AI Mode and AI Overviews — the first first-party Google surface with AI query terms) and the 27 Sep Perplexity Sonar deadline as a pipeline-breaking date.
+
+### Changed
+
+- **`04 · Technical GEO`** — **dated correction** under the Cloudflare 15 Sep 2026 note: the chapter said existing domains keep their settings; Cloudflare's press release says *"all existing free customers that have not changed their settings"* are moved to the new defaults too. Both Cloudflare texts quoted verbatim, including the Googlebot / Applebot / BingBot sentence; original paragraph retained.
+- **`02 · The Engines`** — Google: PAA ≈ AI Overviews (vendor data, labelled) and citation display as a per-model property that can regress; ChatGPT: the vertical-connector pattern (health → finance) and the Amazon DSP ad pilot with OpenAI's stated control over placement; Perplexity: the Sonar retirement date and Q2D-Web.
+
 ## [0.1.3] — 2026-09-13
 
 ### Added
