@@ -178,7 +178,7 @@ Google runs three distinct AI answer surfaces that share plumbing but behave dif
 
 **Publisher controls & measurement.**
 - **Be in the Bing index:** allow `Bingbot`, submit a sitemap, verify in **Bing Webmaster Tools**.
-- **IndexNow** (Microsoft's open push protocol) notifies Bing the moment content changes, collapsing indexing lag from days to minutes — meaning Copilot can cite something published *today* ([subscribe PR overview](https://subscribepr.com/blog/how-to-get-indexed-on-bing/), industry source).
+- **IndexNow** (Microsoft's open push protocol) *notifies* Bing the moment content changes — Microsoft's own wording is that it "notifies multiple search engines of your content changes as soon as they happen" ([Why IndexNow, Bing Webmaster Tools](https://www.bing.com/indexnow)). **Notification is not indexing:** Microsoft is explicit that submitting a URL does not guarantee it will be indexed, because the engine still has to crawl and process it. So IndexNow removes the *discovery* delay, which is the part that used to be measured in days; what happens after that is the engine's decision. `⚠️ The previous version of this line claimed it collapses indexing lag "from days to minutes", sourced to a marketing blog whose domain now fails TLS. No primary source gives a figure; if you have one, open a PR.`
 - **AI Performance report** (Bing Webmaster Tools, public preview since Feb 2026): shows total citations, cited pages, and "**grounding queries**" — the phrases the AI used to retrieve your content — across Copilot, Bing AI summaries, and select partner integrations ([Bing Webmaster blog](https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview)). Microsoft frames this explicitly as a step toward **GEO** tooling for publishers. This is one of the few *first-party* AI-citation dashboards available — use it.
 
 **How to optimize for Copilot.**
@@ -308,7 +308,7 @@ If the profiles blur together, these are the distinctions that change what you *
 - Search Atlas — *Google AI Mode: How It Works & What It Means for SEO (2026).* [searchatlas.com](https://searchatlas.com/blog/google-ai-mode/)
 - Green Flag Digital — *Google AI Overviews vs. AI Mode vs. Gemini.* [greenflagdigital.com](https://greenflagdigital.com/learning-ai/google-ai-overviews-vs-ai-mode-vs-gemini/)
 - LLM Pulse — *Bingbot: Microsoft's Web Crawler.* [llmpulse.ai](https://llmpulse.ai/ai-crawler-index/bingbot)
-- Subscribe PR — *How to get indexed on Bing (IndexNow).* [subscribepr.com](https://subscribepr.com/blog/how-to-get-indexed-on-bing/)
+- Microsoft — *Why IndexNow*, Bing Webmaster Tools. [bing.com/indexnow](https://www.bing.com/indexnow). Replaced a Subscribe PR blog post cited here until 2026-09-21: `subscribepr.com` resolves to Netlify and serves a `*.netlify.app` certificate, so the hostname fails validation for every client, not just for the link checker. The primary source says less than the blog did, and the chapter now says what the primary source says.
 - tryProfound — *Understanding Grok: WebSearch & DeepSearch.* [tryprofound.com](https://www.tryprofound.com/blog/understanding-grok-a-comprehensive-guide-to-grok-websearch-grok-deepsearch)
 - Anthropic — *Web search tool: Citations* (primary source). [platform.claude.com](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool)
 - This handbook — *Protocol: inline citation density in the smaller answer engines*, observation of 2026-09-13. [protocols/minor-engines-citations.md](protocols/minor-engines-citations.md)
