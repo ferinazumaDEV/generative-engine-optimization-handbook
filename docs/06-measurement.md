@@ -292,6 +292,41 @@ A whole category of "AI visibility" / "AI brand monitoring" tools emerged in 202
 - **DIY (spreadsheet + scripted prompts)** costs only time, teaches you how the engines behave, and — done with proper repeat-sampling — is *more* honest than a black-box score. Best for small prompt sets and skeptical operators. This handbook's [protocol above](#layer-1--the-answer-layer-prompt-set-testing) is a complete DIY method.
 - **Buy** when the prompt set, competitor set, or brand count outgrows manual runs, or when non-technical stakeholders need a dashboard. You're paying for scheduling, parsing, scale, and UI — **not** for a truer number. Keep at least a small DIY check running to sanity-test the vendor's dashboard against reality.
 
+### What DIY can actually reach, measured (2026-09-21)
+
+"DIY costs only time" hides a precondition nobody states: **most answer engines will not show you an answer at
+all** from a script. Each of these was requested once, in a fresh browser context with no account, on a *headed*
+browser, from a datacenter IP in Spain:
+
+| engine | from a server, no account |
+|---|---|
+| **Bing / Copilot** | full page, generated answer present |
+| **Brave Search** (AI answer) | answers, then stops: see the quota note below |
+| **Google** AI Overviews / AI Mode | `google.com/sorry` — the unusual-traffic block |
+| **Perplexity** | sign-in wall on the answer |
+| **Gemini** | sign-in wall |
+| **ChatGPT** with search | navigation times out |
+| **You.com** | sign-in wall |
+
+Four practical consequences, each one measured rather than assumed:
+
+- **A datacenter IP is the wrong place to measure from.** Google is the largest surface and it is simply blocked.
+  A residential connection is a precondition for DIY, not a refinement — and that is also true of most
+  "run it in CI" designs.
+- **Headless browsers get challenged.** The same six queries that a headed browser answered were served a captcha
+  page when run headless from the same address in the same minute, with every answer selector returning zero.
+- **Rate limits look exactly like "the engine didn't cite you".** On Brave, about ten answered queries from one
+  address exhausted the AI answer; an hour later it had still not come back. A blank answer and an answer without
+  citations are indistinguishable in the DOM, so **a run that scores blanks as "not cited" measures its own
+  quota**. Put a control query at the start and the end of every run, and record the page title with every
+  observation — a challenge page and a quota blank both say the engine's name.
+- **Citations may not be where a parser expects.** Bing's generated answer lists its sources beneath the answer
+  and puts an attribution chip beside it, rather than numbering claims inside the text; and every link in the block
+  is a `bing.com` redirect, so the cited domain has to be resolved, not read off the href.
+
+None of this makes DIY wrong. It makes the honest version of it smaller than the sales pitch: from a server,
+without accounts, you can watch roughly one or two engines, slowly, and you must instrument for refusal.
+
 ---
 
 ## A practical monitoring workflow
