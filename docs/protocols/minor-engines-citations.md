@@ -80,6 +80,60 @@ list under the answer** (both forms at once, not one or the other).
   search tool (citations with source URL, title and cited text) rather than to a blog; this
   protocol did not observe the product.
 
+## Observation of 2026-09-21 — the noise floor, and what it turned out to be
+
+The 13 Sep pass said, in its own limits, that *"nearly every answer"* is not a stable property of the
+product; it is what one pass saw. This is the pass that measures how unstable. Same six queries, same
+order, same conditions, a **fresh browser context per query**, run twice **an hour apart** — which is
+what `PROTOCOL.md` §7 of the Cookbook requires before any before/after comparison is readable.
+
+| query | pass A (10:27Z) | pass B (11:30Z) |
+|---|---|---|
+| half-life of caesium-137 | inline, 1 marker | inline, 1 marker |
+| 2022 Fields Medal | inline, 2 | inline, 1 |
+| HTTP/3 vs HTTP/2 | inline, 1 | inline, 3 |
+| intermittent fasting | inline, 1 | **answer, 0 markers** |
+| best language for data science | inline, 4 | **no AI answer** |
+| Suez Canal blockage | inline, 2 | **no AI answer** |
+
+Read naively, the protocol's binary variable — *does the answer carry at least one inline citation
+marker* — changes in **3 of 6 queries**, which would be a 50% noise floor and would make the engine
+unusable as an instrument. Two controls, run immediately after, say that reading is wrong.
+
+**Control 1 — position.** The two queries that returned nothing were the last two of the pass, so they
+were re-asked **alone and first**. Both still returned no AI answer. Position within the pass is not
+the cause.
+
+**Control 2 — the address.** A query that *had* answered in both passes (caesium-137) was then asked on
+its own. It returned **no AI answer either**. So at that moment the engine was not answering this
+address at all: the two blanks in pass B are the quota of a datacenter IP running out, not the product
+deciding to stop citing.
+
+**What the measurement actually is, then.** Among the four queries where the engine answered in both
+passes, the binary variable flipped **once** — intermittent fasting, which carried an inline marker in
+pass A and an answer with none in pass B. One flip in four comparable observations. Marker *counts*
+moved on three of four (2→1, 1→3, 1→0), which is why the protocol scores the binary and treats counts
+as secondary.
+
+**The finding that matters more than the number.** This engine cannot be measured repeatedly from a
+single datacenter address: the quota runs out within an hour of ordinary use, and **a query the engine
+declines to answer looks exactly like a query it answered without citing**. Any study that scores a
+missing answer as "no citation" will manufacture an effect out of its own rate limit. The design
+consequence, for this protocol and for the Cookbook's: record the **page title** with every observation
+(a challenge page and a quota blank both say `Brave Search`), treat *no answer* as a **third outcome**
+rather than as a negative, and verify with a control query before believing any negative result.
+
+**Method and raw data.** Panel of six queries, sha256 `8b875989c10f56bc…`, unchanged from 13 Sep. Scripts,
+the raw JSON of both passes, both controls and the screenshots: `notes/motores-2026-09-21/` and
+`notes/herramientas-2026-09-21/` in the maintainer's working set, published with the study when the study
+publishes. A third pass was scheduled an hour after B and is expected to be mostly blank for the reason
+above; that is evidence about the quota window, not about citation behaviour.
+
+**One more instrument note, from the same day.** The first attempt at pass A ran a **headless** browser
+from the same address and got `Captcha - Brave Search` on all six queries, with every selector at zero.
+Without recording the title, that run would have been published as *"the engine stopped showing AI
+answers"*. A headed browser on a virtual display, same address, same minute, answered all six.
+
 ## How to repeat
 
 Open `https://search.brave.com/search?q=<query>&source=web&summary=1` in a fresh context, wait for
