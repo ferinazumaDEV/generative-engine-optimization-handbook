@@ -24,7 +24,7 @@ The machine-readable version of this table is [`about.jsonld`](about.jsonld) (sc
 | Cite as | DOI [10.5281/zenodo.22299644](https://doi.org/10.5281/zenodo.22299644) (concept DOI, always the latest release) — [`CITATION.cff`](CITATION.cff) |
 | Canonical URL | <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook> |
 | License | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
-| Version | 0.1.3 |
+| Version | 0.1.4 |
 | Published | 2026-08-25 |
 | Last modified | 2026-09-13 |
 | Maturity | `mixed` · reproducible: `no` — see [CLAIMS.md](CLAIMS.md) |

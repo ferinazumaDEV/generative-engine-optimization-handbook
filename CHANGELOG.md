@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.4] — 2026-09-22
+
 ### Added
 - **Weekly landscape entry: [`updates/2026-W39.md`](updates/2026-W39.md)** — covering 14–20 Sep 2026: Cloudflare's 15 Sep defaults confirmed to hit Googlebot **and** the new `Disallow AI Training` setting that resolves the trade-off; Google's **AI contribution pilot** paying publishers whose content grounds AI answers; **OpenAI's Astra for Law**, the third vertical in seventeen days answered from a licensed corpus; **Apple's Siri AI** shipping as a Gemini-backed default answer surface on iOS 27; the first server-log measurement of `llms.txt` with a DOI, and John Mueller's public confound for it; Mueller on the record that Search Console cannot usefully report AI position; Google's scraper-blocking squeeze on third-party rank data; Ahrefs' France natural experiment. Includes **negative findings**, a **coverage-and-gaps** note that names what was *not* swept, and an unusually long **needs-verification** list.
 - **`02 · The Engines` — new section: Siri AI (Apple).** A default answer surface on iOS/iPadOS/macOS/watchOS/visionOS 27 from 14 Sep 2026, Gemini-backed, with no vendor guidance and no measured citation study — stated as unmeasured rather than guessed at, with a pointer to the observation protocol as the way to fix that.
