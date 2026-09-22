@@ -9,6 +9,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [0.1.4] — 2026-09-22
 
 ### Added
+- **`06 · Measurement` — the noise floor of the Brave observation, and the
+  confound two controls found.** Six queries, twice, an hour apart. Read
+  naively the binary citation variable changed in three of six; that reading is
+  wrong. A position control and an address control show the two blanks were a
+  datacenter address running out of quota, not the product deciding to stop
+  citing. Among the four queries answered in both passes the variable flipped
+  once. The finding that outlives the number: **a query an engine declines to
+  answer looks exactly like a query it answered without citing**, so a study
+  that scores a missing answer as "no citation" manufactures an effect out of
+  its own rate limit.
+- **`docs/protocols/minor-engines-citations.md`** — what do-it-yourself
+  measurement can actually reach, measured rather than assumed.
+- `RELEASING.md`: how a release of this work actually happens, including the
+  rule that the GitHub Release is created by hand here and that doing so is what
+  mints the DOI — the opposite of the rule in the package repositories.
 - **Weekly landscape entry: [`updates/2026-W39.md`](updates/2026-W39.md)** — covering 14–20 Sep 2026: Cloudflare's 15 Sep defaults confirmed to hit Googlebot **and** the new `Disallow AI Training` setting that resolves the trade-off; Google's **AI contribution pilot** paying publishers whose content grounds AI answers; **OpenAI's Astra for Law**, the third vertical in seventeen days answered from a licensed corpus; **Apple's Siri AI** shipping as a Gemini-backed default answer surface on iOS 27; the first server-log measurement of `llms.txt` with a DOI, and John Mueller's public confound for it; Mueller on the record that Search Console cannot usefully report AI position; Google's scraper-blocking squeeze on third-party rank data; Ahrefs' France natural experiment. Includes **negative findings**, a **coverage-and-gaps** note that names what was *not* swept, and an unusually long **needs-verification** list.
 - **`02 · The Engines` — new section: Siri AI (Apple).** A default answer surface on iOS/iPadOS/macOS/watchOS/visionOS 27 from 14 Sep 2026, Gemini-backed, with no vendor guidance and no measured citation study — stated as unmeasured rather than guessed at, with a pointer to the observation protocol as the way to fix that.
 - **`07 · Research & Cases`** — HAE-GEO ([arXiv:2609.06027](https://arxiv.org/abs/2609.06027) v2) on what agents do *after* ingesting poisoned evidence; the now-settled *Caption Injection* paper (ECML PKDD 2026, logged not endorsed); and Ahrefs' France before/after study, labelled vendor data with its 9-day post-window stated.
@@ -21,6 +36,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **`06 · Measurement`** — Merchant Center *AI performance insights* (top search intents, top terms, popular attributes for AI Mode and AI Overviews — the first first-party Google surface with AI query terms) and the 27 Sep Perplexity Sonar deadline as a pipeline-breaking date.
 
 ### Changed
+- **A sentence published in this handbook an hour earlier was disproved and is
+  withdrawn in place.** The noise-floor section predicted a third pass and said
+  the quota *"recovers on its own with time"*. Pass C ran an hour later and
+  returned 0 of 6, every page titled `Brave Search`. The claim rested on pass B
+  answering four queries an hour after pass A, which is equally explained by the
+  budget not being spent yet. What is measured, and all that is measured: about
+  ten answered queries exhaust it, and recovery is longer than an hour. The
+  design consequence is harsher than the first version implied — **a panel of 12
+  queries by 5 engines by 4 dates does not fit on one datacenter address**, and
+  spacing requests within a day does not fix it.
 - **`04 · Technical GEO`** — **resolution** of the Cloudflare `needs-verification` flag: the 15 Sep defaults do apply to mixed-use crawlers (*"either setting impacts search as well as training"*), and the new **Disallow AI Training** setting publishes a `Disallow:` directive for `Google-Extended` / `Applebot-Extended` instead — with Bing unsupported until early 2027. Also: the `llms.txt` verdict now rests on a measurement rather than an absence (Hall, [10.5281/zenodo.22814844](https://doi.org/10.5281/zenodo.22814844), competing interest declared) plus Mueller's directory-site confound; Apple's blunt `nosnippet` opt-out compared against Google's and Cloudflare's surgical ones; `ChatGPT-User` re-dated to 219 prefixes (18 Sep 2026) against Perplexity's nineteen-month-old IP file; `Mediapartners-Google` generalised.
 - **`02 · The Engines`** — ChatGPT: **Astra for Law** completing the health → finance → law run, with the consequence stated plainly (in a licensed vertical the ceiling on open-web citation is set by the deal, not by your content); Sponsored Agents quoted from OpenAI's own post; the Instant→Thinking retirement as a measurement confound. Google: local knowledge panels rendering as AI Overviews, AI Mode text-link ads that **must be excluded from citation counts**, and Search Live on Gemini 3.8 Live as a third surface with unmeasured citation behaviour.
 
