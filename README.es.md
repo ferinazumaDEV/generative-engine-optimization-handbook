@@ -1,4 +1,4 @@
-<!-- synced-from: 2c2ace8d05794cab4b3b2b29d2e31f8c6bda92ed -->
+<!-- synced-from: 7d2a4dafb6622bee226816a54c7a29ae2a895778 -->
 
 # The GEO Handbook
 
@@ -28,7 +28,7 @@ La versión legible por máquina de esta tabla es [`about.jsonld`](about.jsonld)
 | Cómo citarlo | DOI [10.5281/zenodo.22299644](https://doi.org/10.5281/zenodo.22299644) (DOI de concepto, siempre la última versión) — [`CITATION.cff`](CITATION.cff) |
 | URL canónica | <https://github.com/ferinazumaDEV/generative-engine-optimization-handbook> |
 | Licencia | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
-| Versión | 0.1.3 |
+| Versión | 0.1.4 |
 | Publicado | 2026-08-25 |
 | Última modificación | 2026-09-13 |
 | Madurez | `mixed` · reproducible: `no` — ver [CLAIMS.md](CLAIMS.md) |
