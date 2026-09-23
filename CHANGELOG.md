@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+- **2026-09-23 cluster review — addendum to [`updates/2026-W39.md`](updates/2026-W39.md).** Re-verification of every crawler page (OpenAI, Anthropic, Perplexity, Meta, Google, Common Crawl) with nothing moved; DuckDuckGo's `DuckAssistBot` documented from first-party pages; IETF `aipref-vocab-08` (14 Sep) adding `ai-use`; Bing's 16 Jun *Citation Share* definition and the SharePoint enterprise citation analytics; Microsoft's deep-citations slip to Nov CY2026; Perplexity's preset-dependent citation markup; the SE Ranking source of the "~14% overlap" figure, corrected in place with the original left standing; Comscore's Q2 2026 panel figures; and a dated fourth block in `07 · Research & Cases` with fourteen papers located on arXiv or in the DOI registry, including C-SEO Bench cited at last, the SIGIR proceedings DOI, the Agarwal & Sen SSRN working paper that resolves a W39 watching item, and the re-read Jaccard tables that resolve the `needs verification` on CLAIMS.md row 12.
+- Glossary: *AIPREF / Content-Usage* and *Citation Share (Bing)*.
+- `about.jsonld` `dateModified` moved to 2026-09-23 (README, README.es.md and `llms.txt` mirror it); reference links for 0.1.2, 0.1.3 and 0.1.4 added at the foot of this file, and the Unreleased comparison now starts at v0.1.4.
+
 ## [0.1.4] — 2026-09-22
 
 ### Added
@@ -138,6 +143,9 @@ the repository on the 4th and remained in the archive until now.
 - GitHub templates: pull request template and a "new technique" issue template, both requiring cited/verifiable contributions.
 - `LICENSE`: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 
-[Unreleased]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.4
+[0.1.3]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.3
+[0.1.2]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.2
 [0.1.1]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.1
 [0.1.0]: https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/releases/tag/v0.1.0

@@ -26,7 +26,7 @@ The machine-readable version of this table is [`about.jsonld`](about.jsonld) (sc
 | License | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | Version | 0.1.4 |
 | Published | 2026-08-25 |
-| Last modified | 2026-09-13 |
+| Last modified | 2026-09-23 |
 | Maturity | `mixed` · reproducible: `no` — see [CLAIMS.md](CLAIMS.md) |
 
 ---
@@ -48,7 +48,7 @@ This handbook is a **free, public, community-maintained reference** on how gener
 | # | Section | What it covers |
 |---|---------|----------------|
 | 01 | [Foundations](docs/01-foundations.md) | What GEO is, GEO vs SEO vs AEO, how generative engines retrieve and cite, core vocabulary |
-| 02 | [The Engines](docs/02-engines.md) | ChatGPT Search, Perplexity, Google AI Overviews / AI Mode, Gemini, Copilot — how each retrieves & cites, and how they differ |
+| 02 | [The Engines](docs/02-engines.md) | ChatGPT Search, Perplexity, Google AI Overviews / AI Mode, Gemini, Copilot, Claude, Siri AI and other engines — how each retrieves & cites, and how they differ |
 | 03 | [Content Strategy](docs/03-content.md) | Writing extractable, citable content: structure, quotable stats, "chunk‑friendly" formatting, entity clarity |
 | 04 | [Technical GEO](docs/04-technical.md) | Crawlability for AI bots, `robots.txt` & AI user‑agents, structured data, `llms.txt`, feeds, rendering |
 | 05 | [Authority & Trust](docs/05-authority.md) | E‑E‑A‑T for machines, entities & knowledge graphs, citations, brand mentions, off‑site presence |

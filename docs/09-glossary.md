@@ -71,6 +71,10 @@ Informal umbrella term for "optimizing for AI search," usually meaning GEO plus 
 
 See [Share of Voice](#share-of-voice-sov--citation-share).
 
+### AIPREF / Content-Usage
+
+The IETF **AI Preferences** working group's draft vocabulary and attachment mechanism for stating how content may be used by AI systems. As of `draft-ietf-aipref-vocab-08` (14 Sep 2026) the categories are **`train-ai`**, **`ai-use`** (an asset used as input to a generative model without the user supplying it directly) and **`search`**; `draft-ietf-aipref-attach-05` attaches them through a **`Content-Usage`** HTTP response header or a `Content-Usage` rule in `robots.txt`. Internet-Drafts, not standards; the vocabulary draft states it does not yet reflect working-group consensus. ([draft-ietf-aipref-vocab-08](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-08.html) · [datatracker](https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/)) *(added 2026-09-23)* → [04 · Technical GEO](04-technical.md#standardizing-the-signal-ietf-aipref)
+
 ### Answer engine
 
 A search experience that returns a **synthesized answer** (often with citations) instead of, or above, a list of links. Includes both AI-answer surfaces inside traditional search (AI Overviews) and standalone assistants (ChatGPT, Perplexity). The generative subset of answer engines is what GEO targets. → [01 · Foundations](01-foundations.md)
@@ -134,6 +138,10 @@ Whether your **facts or claims are carried into an answer even when you are not 
 ### Citation share
 
 See [Share of Voice](#share-of-voice-sov--citation-share).
+
+### Citation Share (Bing)
+
+A named metric in Bing Webmaster Tools' AI Performance report since 16 Jun 2026: *"the percentage of citations attributed to your site out of all citations shown across all sites for that same grounding query."* Computed on a sample, per grounding query, across Copilot, Bing AI summaries and select partner integrations (ChatGPT is not listed; whether a partner integration covers it is not stated). Distinct from the generic [citation share / share of voice](#share-of-voice-sov--citation-share) a prompt-set panel computes. ([Bing Search blog](https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare) · [Bing help](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c)) *(added 2026-09-23)* → [06 · Measurement](06-measurement.md#bing-webmaster-tools-ai-performance--the-16-jun-2026-expansion-added-2026-09-23)
 
 ### ClaudeBot / Claude-SearchBot / Claude-User
 

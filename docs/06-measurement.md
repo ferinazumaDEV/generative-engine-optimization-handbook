@@ -238,6 +238,8 @@ On **2026-06-03**, Google launched dedicated **Generative AI performance reports
 
 Use it as a **diagnostic lens** (where does Google surface me in AI?), not a scoreboard. `⚠️ This report is new and evolving — Google has said it's still deciding which metrics to add; re-check current capabilities in the GSC docs.`
 
+> **Re-checked 2026-09-23 — still impressions only.** Google's help page defines impressions (a link shown in a generative AI feature) grouped by page, country, device and date and no click or query metric; it says the insights reached all websites worldwide as of 31 Aug 2026, while a later paragraph still says not all properties have access ([Google Search Console Help](https://support.google.com/webmasters/answer/16984139?hl=en)). A separate **Discover** generative AI report counts impressions of links seen in Discover AI features, grouped by pages, countries and dates, worldwide since the same date ([Google Search Console Help](https://support.google.com/webmasters/answer/16983858?hl=en)).
+
 > **Google says so itself (added 2026-09-21).** Asked why AI surfaces have no usable position metric, Google's John Mueller answered: *"Position for these is hard to do in a way that makes it useful, so we're currently tracking it like we do for many search features (as a block), & it's not separated out in the Gen-AI performance report."* He added that the metrics *"will evolve over time"* as the features do, and that *"The goal is not a written-in-stone absolute truth for position counting (that's impossible), but rather to make something that's useful for site owners"* ([Search Engine Journal, 13 Sep 2026](https://www.searchenginejournal.com/google-admits-search-console-reporting-for-ai-search-is-inadequate/589236/) · [Search Engine Roundtable, 16 Sep 2026](https://www.seroundtable.com/google-search-console-ai-reporting-change-42099.html)). Take that at face value: **the vendor's own metric is provisional and not separable by surface.** It is a diagnostic lens, and Google agrees. If you need a number you can defend, you have to measure citation yourself.
 
 ### Two vendor-side confounds landed in one week (2026-09-21)
@@ -253,7 +255,23 @@ Both of these change the *instrument*, not the sites being measured, and both fa
 
 **An API deadline that breaks pipelines (added 2026-09-14).** If your tracking calls Perplexity's `sonar`/`sonar-pro` chat completions, they stop on **27 Sep 2026**; migrate to the Agent API and **re-baseline** your citation counts, because a different endpoint is not guaranteed to retrieve or cite identically. **Where the citations move (checked 2026-09-21):** Sonar returned `citations` and `search_results` as separate top-level fields; the Agent API returns `search_results` as an item inside the typed output array, so a parser that reads the old shape gets nothing rather than an error ([migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)). The canonical endpoint is `https://api.perplexity.ai/v1/agent`; `/v1/responses` still answers as an OpenAI-compatible alias, so code pointed at it keeps working and a pipeline can look healthy while reading the wrong field ([Perplexity API forum, staff reply 10 Sep 2026](https://community.perplexity.ai/t/sonar-moving-to-agents-api/6061) · [migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)).
 
+**The preset changes the citation markup, not only the endpoint (added 2026-09-23).** Perplexity's July 2026 changelog entry states that the `fast` preset cites with numbered markers such as `[1]` while `low`, `medium` and `high` cite with source-typed markers such as `[web:1]`, and that after a successful tool call those three presets include at least one citation in the final answer ([Perplexity changelog](https://docs.perplexity.ai/changelog.md)). A regex that counts `[n]` alone scores every `[web:n]` answer as uncited; log the preset with the model, and re-baseline when it changes. Re-checked 2026-09-23: the migration guide still says Sonar is supported until 27 Sep 2026 and the changelog carries no retirement entry ([migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)).
+
 ---
+
+### Bing Webmaster Tools AI Performance — the 16 Jun 2026 expansion (added 2026-09-23)
+
+The one first-party report that names a citation-share metric. On **16 Jun 2026** Bing added **Intents, Topics, Citation Share and Compare** to the AI Performance report. The definition, verbatim: *"Citation Share shows how much of the citation space your site receives for a specific grounding query. It is calculated as the percentage of citations attributed to your site out of all citations shown across all sites for that same grounding query."* ([Bing Search blog, 16 Jun 2026](https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare)). Three things the help page says that bound what the number means ([Bing Webmaster help](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c)):
+
+- **Coverage:** Microsoft Copilot, AI-generated summaries in Bing, and select partner AI integrations (ChatGPT is not listed; whether a partner integration covers it is not stated).
+- **The data is a sample**, "not a complete log of every instance where content may have been referenced"; it refreshes daily with a short processing delay.
+- **Export** is CSV or Excel, so the series can be kept outside the tool.
+
+Read against Google's report above: Bing gives a share of citations per grounding query; Google gives impressions and nothing per query. Neither gives clicks from the AI surface. `⚠️ The Bing blog has published nothing since 16 Jun 2026 (checked 2026-09-23), so the report's scope is as stated there.`
+
+**The enterprise side has citation counts the public web does not.** Microsoft's Message Center post MC1247902 (roadmap 480725) says SharePoint will show *"how often content is referenced by Microsoft 365 Copilot chat"* — popular content ranked by citations and a "Total citations" card — for tenants with more than 50 Copilot licences, rolling out end of August to end of September 2026 ([community mirror of the Message Center post, published 9 Mar 2026, last updated 2 Sep 2026](https://mc.merill.net/message/MC1247902); the first-party admin-center text needs a tenant login and was not opened). That there is no public-web equivalent is this handbook's inference, not a statement on the page. Separately, web-search citations in Microsoft 365 Copilot appear only in Copilot Chat, not in the Copilot pane inside Word or PowerPoint, and expire from the thread after 24 hours ([Microsoft Learn, 2026-08-18](https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access)) — so a screenshot-based panel inside Office apps sees no citations at all.
+
+**First-party reporting elsewhere, as of 2026-09-23:** no OpenAI, Perplexity or Anthropic surface that reports citations to a site owner was found in their developer documentation or changelogs on this pass; that is a "found none", not a "does not exist".
 
 ## The 2026 GEO tool landscape
 
@@ -371,6 +389,13 @@ The professional posture: **report ranges, label your run-counts, date every fig
 ---
 
 ## Sources
+
+**Added 2026-09-23 (cluster review):**
+
+- Bing — [New AI Visibility Insights in Bing Webmaster Tools: Intents, Topics, Citation Share, Compare](https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare) (16 Jun 2026) · [AI Performance help](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c)
+- Microsoft — [Manage public web access in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access) · [Message Center MC1247902 (community mirror)](https://mc.merill.net/message/MC1247902)
+- Google — [Generative AI performance report (Search)](https://support.google.com/webmasters/answer/16984139?hl=en) · [Generative AI performance report (Discover)](https://support.google.com/webmasters/answer/16983858?hl=en)
+- Perplexity — [Developer changelog](https://docs.perplexity.ai/changelog.md)
 
 Primary and academic:
 

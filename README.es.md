@@ -1,4 +1,4 @@
-<!-- synced-from: 7d2a4dafb6622bee226816a54c7a29ae2a895778 -->
+<!-- synced-from: fb82536407ecf384a536d3d517dc364116bddd47 -->
 
 # The GEO Handbook
 
@@ -30,7 +30,7 @@ La versión legible por máquina de esta tabla es [`about.jsonld`](about.jsonld)
 | Licencia | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | Versión | 0.1.4 |
 | Publicado | 2026-08-25 |
-| Última modificación | 2026-09-13 |
+| Última modificación | 2026-09-23 |
 | Madurez | `mixed` · reproducible: `no` — ver [CLAIMS.md](CLAIMS.md) |
 
 ---
@@ -54,7 +54,7 @@ Los capítulos están en inglés.
 | # | Capítulo | Qué cubre |
 |---|---------|----------------|
 | 01 | [Foundations](docs/01-foundations.md) | Qué es GEO, GEO frente a SEO y AEO, cómo recuperan y citan los motores generativos, vocabulario básico |
-| 02 | [The Engines](docs/02-engines.md) | ChatGPT Search, Perplexity, Google AI Overviews / AI Mode, Gemini, Copilot — cómo recupera y cita cada uno, y en qué se diferencian |
+| 02 | [The Engines](docs/02-engines.md) | ChatGPT Search, Perplexity, Google AI Overviews / AI Mode, Gemini, Copilot, Claude, Siri AI y otros motores — cómo recupera y cita cada uno, y en qué se diferencian |
 | 03 | [Content Strategy](docs/03-content.md) | Escribir contenido extraíble y citable: estructura, datos citables, formato apto para trocear, claridad de entidad |
 | 04 | [Technical GEO](docs/04-technical.md) | Rastreabilidad para bots de IA, `robots.txt` y user-agents de IA, datos estructurados, `llms.txt`, feeds, renderizado |
 | 05 | [Authority & Trust](docs/05-authority.md) | E-E-A-T para máquinas, entidades y grafos de conocimiento, citas, menciones de marca, presencia fuera del sitio |

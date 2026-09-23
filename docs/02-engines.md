@@ -61,6 +61,8 @@ The single most actionable thing to understand is **which bot does what**, becau
 
 > ⚠️ **Volatile — re-check before hard-coding a rule.** User-agent *version numbers* and IP-range files change over time. Verified **2026-09-14** against the vendor pages: OpenAI publishes `GPTBot/1.4`, `OAI-SearchBot/1.4` and `ChatGPT-User/1.0`, each with its own IP list (`openai.com/gptbot.json`, `openai.com/searchbot.json`, `openai.com/chatgpt-user.json`; `openai.com/adsbot.json` is `OAI-AdsBot`'s) ([OpenAI docs](https://developers.openai.com/api/docs/bots)); Perplexity publishes `PerplexityBot/1.0` and `Perplexity-User/1.0`, each with its own IP-list JSON linked from the page ([Perplexity docs](https://docs.perplexity.ai/guides/bots)); Meta's five tokens are all at `/1.1` ([Meta docs](https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers)); Anthropic names its three bots without version numbers ([Anthropic support](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)). The machine-readable IP list is the thing to automate against; the version number is the thing that will silently change.
 
+> **Re-verified 2026-09-23 against the vendor pages — nothing moved.** OpenAI still publishes `GPTBot/1.4`, `OAI-SearchBot/1.4`, `ChatGPT-User/1.0` and `OAI-AdsBot`, and still states that each robots.txt setting is independent of the others ([OpenAI bots page](https://developers.openai.com/api/docs/bots)); its API changelog's September entries (latest 22 Sep) contain nothing about search, citations or crawlers ([changelog](https://developers.openai.com/api/docs/changelog)). Anthropic's support article (updated 7 Apr 2026) still names `ClaudeBot`, `Claude-User` and `Claude-SearchBot` without version strings, and its IP file `claude.com/crawling/bots.json` carries creationTime 2026-08-18 with 26 prefixes ([Anthropic](https://support.claude.com/en/articles/8896518)). Perplexity's `perplexitybot.json` is byte-identical on `www.perplexity.com` and `www.perplexity.ai` (creationTime 2025-02-07, eight prefixes) and `perplexity-user.json` dates from 2025-10-17 ([Perplexity crawler docs](https://docs.perplexity.ai/guides/bots)). Meta's five tokens remain at `/1.1` ([Meta](https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers)). Neither the OpenAI nor the Perplexity nor the Meta page prints a last-updated stamp, so "unchanged" means unchanged between the 14 Sep and 23 Sep reads.
+
 ---
 
 ## ChatGPT & ChatGPT Search (OpenAI)
@@ -93,6 +95,8 @@ The single most actionable thing to understand is **which bot does what**, becau
 - **Write direct, question-shaped answers.** A page that names the exact user-agent to allow, the file to edit, and the mistake to avoid is easier to lift into an answer than a discursive essay.
 - **Freshness and clear entity naming help**, as ChatGPT favors current, specific content for time-sensitive queries.
 
+**Dated note (2026-09-23) — Voice now searches, and its citation display is unmeasured.** The ChatGPT release notes entry of **9 Sep 2026** says *"ChatGPT Voice can now use GPT-5.6 or GPT-6 Astra when it needs to search or reason through harder questions. Choose your model and reasoning effort using the same controls as text chat."* ([ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) — 403 to automated clients; read from the Internet Archive raw mirror, snapshot 2026-09-18, whose newest entry is 17 Sep). Whether a Voice answer shows attributable sources, and in what form, is not stated by OpenAI and has not been measured here — the same gap as Siri AI and Search Live. *Re-checked 2026-09-23: the user-agent list above is unchanged; the "ChatGPT = Bing" heuristic remains `needs verification` — the Peec AI in-house-index claim logged in W39 is still single-source.*
+
 *Last verified: 2026-08.*
 
 ---
@@ -120,6 +124,11 @@ The single most actionable thing to understand is **which bot does what**, becau
 - **Keep pages fresh and structurally clean** — clear headings, factual, well-attributed.
 - **Allow `PerplexityBot`** and monitor server logs for its visits to see what's being indexed.
 
+**Dated notes (2026-09-23).**
+- **Sonar deadline unchanged, retirement still unannounced in the changelog.** The migration guide still says *"Sonar will be supported until September 27, 2026"* ([migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)); the developer changelog's five September entries cover new Agent API models, custom MCP connectors and OAuth for the remote MCP server, and none mentions the retirement ([changelog](https://docs.perplexity.ai/changelog.md)). The next pass must record whether the endpoint actually stopped.
+- **Citation markup differs by preset.** The July 2026 changelog entry states that the `fast` preset cites with numbered markers such as `[1]`, while `low`, `medium` and `high` cite with source-typed markers such as `[web:1]`, and that *"after a successful tool call, the `low`, `medium`, and `high` presets include at least one citation in the final answer"* ([changelog, July 2026](https://docs.perplexity.ai/changelog.md)). A parser that counts `[n]` alone misses every `[web:n]` — see [06 · Measurement](06-measurement.md).
+- **IP files.** `perplexitybot.json` is byte-identical on `www.perplexity.com` and `www.perplexity.ai` (creationTime 2025-02-07, eight prefixes, not regenerated in nineteen months); the docs give the `.com` host as canonical ([Perplexity crawler docs](https://docs.perplexity.ai/guides/bots)).
+
 *Last verified: 2026-08.*
 
 ---
@@ -139,6 +148,8 @@ Google runs three distinct AI answer surfaces that share plumbing but behave dif
 **Citation behavior.** Selection is **largely independent of a single ranking position** and works at the **passage level**, drawing from a broader retrieval pool shaped by fan-out. Independent studies report that pages ranking in the top 10/20 are far more likely to be cited than lower-ranked pages, but the visible #1 result is often *not* the cited source — and citation overlap between AI Mode and AI Overviews is low (multiple 2026 analyses put it around **~14%**, meaning the two surfaces cite very differently despite shared infrastructure).
 
 > ⚠️ **needs verification:** the passage-selection specifics (e.g. cosine-similarity of scroll-to-text fragments to sub-queries) and the "~14% overlap" figure come from third-party SEO measurements, not Google. They're directionally useful but not officially confirmed — cite them as third-party observations, and expect them to move.
+
+> **Correction and addition (2026-09-23) — the source of the "~14%" figure, and what it actually compares.** SE Ranking's June 2025 sample of 10,000 keywords reports *"AI Mode and AI Overviews share a response overlap in 10.7% of URLs and 16% of domains. Overlap between AIM and organic results is also limited: 14% at the URL level"* (21.9% at domain level) ([SE Ranking, 29 Aug 2025](https://seranking.com/blog/ai-mode-research/), industry-study). So **14% is AI Mode vs. the organic top 10; AI Mode vs. AI Overviews is 10.7%** — the sentence above conflates them. The original wording is left in place; the attribution to this study is the handbook's, not SE Ranking's. A later SE Ranking pass (68,313 keywords, 1,321,398 AI Mode citations collected 12 Feb 2026) reports **google.com as the most-cited domain at 17.42%**, up from 5.7% in June 2025, *"more than the next six domains combined"* ([SE Ranking, 6 Mar 2026](https://seranking.com/blog/google-links-in-ai-mode-answers/), industry-study, single SEO-tool dataset) — self-citation share is now a variable a panel must report.
 
 **Crawlers / user-agents.** There is **no AI-specific fetching crawler**: `Googlebot` crawls for the Search index, and the AI features draw from that same index. `Google-Extended` is **not a separate crawler that appears in your logs** — it's a `robots.txt` *token* that lets you opt out of having your already-crawled content used for Gemini/Vertex generative training and grounding.
 
@@ -161,6 +172,8 @@ Google runs three distinct AI answer surfaces that share plumbing but behave dif
 - **Optimize for fan-out, not just your head term.** Cover the *sub-questions* a topic implies; entity-rich passages that name specific tools, stats, and steps score better in passage retrieval.
 - **Write self-contained passages** (~40–60 words) that answer one sub-query cleanly, with clear headings around them.
 - **Don't reach for special AI markup** — Google explicitly says none is needed. Spend that effort on clarity and coverage instead. (Schema still helps *classic* rich results and entity understanding; see [04 · Technical GEO](04-technical.md).)
+
+**Re-checked 2026-09-23.** Google's help page for the Search generative AI performance report still defines impressions only (links shown in a generative AI feature, grouped by page, country, device and date) and no click or query metric; it says *"As of August 31, 2026, we've rolled out these insights to all websites worldwide"* while a later paragraph still reads "Not all properties have access to the report, as we're rolling out" ([Google Search Console Help](https://support.google.com/webmasters/answer/16984139?hl=en)). A separate report exists for **Discover** ([Google Search Console Help](https://support.google.com/webmasters/answer/16983858?hl=en)). Comscore's Q2 2026 panel puts an AI Overview on **39.4%** of desktop Google searches in June 2026, up from 25.8% in July 2025 ([Comscore press release, 22 Sep 2026](https://www.comscore.com/Insights/Press-Releases/2026/9/Comscores-Q2-2026-AI-Intelligence-Report), industry-study; desktop panel; the release states no geography) — a different instrument from the Semrush keyword-based prevalence figures in [01 · Foundations](01-foundations.md#why-it-matters-now-2026), so do not splice the series.
 
 *Last verified: 2026-08.*
 
@@ -185,6 +198,13 @@ Google runs three distinct AI answer surfaces that share plumbing but behave dif
 - **Prioritize Bing indexing and IndexNow** — the highest-leverage, lowest-effort move, and it double-dips into ChatGPT Search.
 - **Structure for liftability:** clear headings, definitions, tables; put the answer near the top.
 - **Lean into Microsoft-adjacent authority** where relevant (Microsoft Learn, LinkedIn, well-structured docs) — Copilot draws heavily on these.
+
+**Dated notes (2026-09-23).**
+- **Deep citations slipped.** Microsoft 365 roadmap item 523223, *Deep citations in Copilot*, shows status "In development", public preview **October CY2026** and general availability **November CY2026**, modified 2026-09-16; scope starts with Word and PowerPoint files, *"then adding Meetings, Web, and PDF references"* ([Microsoft 365 roadmap API](https://www.microsoft.com/releasecommunications/api/v1/m365?id=523223)) — so no web-citation change ships this quarter. Whether an earlier GA date was carried in July stays `needs verification`; the API returns current values only.
+- **Where web citations show at all.** Microsoft documents that web-search query citations appear only in Microsoft 365 Copilot Chat, not in the Copilot pane inside Word or PowerPoint, and that queries expire from the thread after 24 hours; the queries sent to Bing do not affect Bing ranking ([Microsoft Learn, 2026-08-18](https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access)).
+- **Enterprise-only citation analytics.** Message Center post MC1247902 (roadmap 480725) says SharePoint will show *"how often content is referenced by Microsoft 365 Copilot chat"* — popular content ranked by citations and a "Total citations" card — for tenants with more than 50 Copilot licences, rolling out end of August to end of September 2026 ([community mirror of the Message Center post, published 9 Mar, updated 2 Sep 2026](https://mc.merill.net/message/MC1247902); the first-party admin-center post needs a tenant login). That no public-web equivalent exists is this handbook's inference. Details in [06 · Measurement](06-measurement.md#bing-webmaster-tools-ai-performance--the-16-jun-2026-expansion-added-2026-09-23).
+- **Bing crawler list.** Bing names five crawlers — `Bingbot`, `AdIdxBot`, `BingPreview`, `MicrosoftPreview` and `BingVideoPreview`; `MicrosoftPreview/2.0` generates page snapshots for Microsoft products ([Bing Webmaster help](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0)). Comscore's panel puts Copilot Search on **17.3%** of Bing searches in June 2026, from 11.8% a year earlier ([Comscore press release, 22 Sep 2026](https://www.comscore.com/Insights/Press-Releases/2026/9/Comscores-Q2-2026-AI-Intelligence-Report), industry-study).
+- *Re-checked 2026-09-23: the Bing Search blog's newest post is still 16 Jun 2026; the M365 Copilot release notes' newest entry is 25 Aug 2026 ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes)).*
 
 *Last verified: 2026-08.*
 
@@ -219,6 +239,8 @@ Disallow: /
 - **Clarity and accuracy signals matter**, given Claude-SearchBot's stated goal of relevance and accuracy — well-structured, factually clean, well-attributed content.
 - **Standard extractability wins:** self-contained passages, clear definitions, sources cited on your own page.
 
+**Re-checked 2026-09-23.** The support article (updated 7 Apr 2026) is unchanged: three bots, no version strings, and the sentence that matters for visibility — *"Disabling Claude-SearchBot on your site prevents our system from indexing your content for search optimization, which may reduce your site's visibility and accuracy in user search results."* ([Anthropic](https://support.claude.com/en/articles/8896518)). Comscore's panel has Claude's share of AI prompt volume rising from 2% to 11% between January and June 2026 ([Comscore press release, 22 Sep 2026](https://www.comscore.com/Insights/Press-Releases/2026/9/Comscores-Q2-2026-AI-Intelligence-Report), industry-study) — enough that a citation panel that omits Claude is omitting a measurable slice.
+
 *Last verified: 2026-08.*
 
 ---
@@ -232,6 +254,8 @@ The long tail is growing and worth tracking; treat this section as a watchlist r
 - **DeepSeek** — a reasoning-focused model that integrated web search; popular as a free, uncapped option. ⚠️ **needs verification — no first-party crawler documentation found.** Searched again 2026-09-21, and the check that settles it: the user-agent string the directories attribute to DeepSeek is `Mozilla/5.0 (compatible; DeepSeekBot/1.0; +https://www.deepseek.com/about)`, and **that URL — the one inside the token, whose whole purpose is to identify the operator — returns 404**. `deepseek.com/robots.txt` is `User-Agent: * / Allow: /` and names no DeepSeek crawler. So the community [ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt) list and several bot directories carry a `DeepseekBot/1.0` token whose self-identification link does not resolve, while one directory states the opposite — *"DeepSeek does not publish a user agent for its crawler"* and its fetches *"look like regular browser traffic in your logs"* ([xSeek, updated Apr 2026](https://www.xseek.io/docs/deepseek-user-agents)); no page on DeepSeek's own site or API docs describing a crawler turned up in that search (which proves only that the search found none). Treat any DeepSeek token as unconfirmed until DeepSeek publishes one.
 - **Brave Search (AI answer), You.com, Arc** — smaller answer engines. In a one-pass observation on **2026-09-13**, **Brave Search's AI answer showed inline citation markers on 6 of 6 fixed queries** (3–12 link chips per answer, plus a sources list under the answer). **You.com** could not be observed: in a clean session its search redirects to a sign-in page. **Arc** has no Linux client and was not observed. Method, queries, timestamps and limits: [`protocols/minor-engines-citations.md`](protocols/minor-engines-citations.md). Lower reach than the majors; sometimes their own crawlers and controls. *Scope: one pass per query, from Spain, no login, on the date given; two follow-up requests minutes later returned no AI answer, so this describes the product that day, not a stable rate.*
 
+- **DuckDuckGo — Duck.ai / DuckAssist (added 2026-09-23).** The first of the "not swept" engines, now read from first-party pages. DuckDuckGo's help page states that `DuckAssistBot` *"crawls pages in real-time for our AI-assisted answers, which prominently cite their sources. This data is not used in any way to train AI models."* A `robots.txt` disallow takes effect after **72 hours** and does not affect organic rankings or inclusion; the user agent is `DuckAssistBot/1.2` and IPs are published at `duckduckgo.com/duckassistbot.json` (creationTime 2026-09-01, 486 prefixes) ([DuckDuckGo help](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot); the help page prints no date). Citation behaviour of the answer surface itself is not measured here.
+
 > ⚠️ **needs verification:** the emerging-engine details above lean on secondary sources and move quickly. Before optimizing for any of them, confirm the current crawler tokens, index source, and citation behavior against first-party documentation, and log material changes in [`updates/`](../updates/README.md).
 
 ---
@@ -239,6 +263,8 @@ The long tail is growing and worth tracking; treat this section as a watchlist r
 ## Cross-engine comparison
 
 As of **2026-08**. "Index source" = where answer candidates primarily come from. Verify each cell before betting on it.
+
+> **Dated note (2026-09-23) — which engines a panel should weight.** Comscore's Q2 2026 report says ChatGPT's share of AI prompt volume fell from 70% to 50% between January and June 2026 while Gemini rose from 17% to 30% and Claude from 2% to 11% ([Comscore press release, 22 Sep 2026](https://www.comscore.com/Insights/Press-Releases/2026/9/Comscores-Q2-2026-AI-Intelligence-Report), industry-study; opt-in panel, the underlying report was not opened). The table's rows are unchanged; the weight a measurement panel gives each row is not.
 
 | Engine | Primary index / retrieval source | Search/answer crawler to **allow** | Training bot you may **block** separately | Citation density | First-party publisher controls |
 |---|---|---|---|---|---|
@@ -282,6 +308,16 @@ If the profiles blur together, these are the distinctions that change what you *
 ---
 
 ## Sources
+
+**Added 2026-09-23 (cluster review):**
+
+- OpenAI — [API changelog](https://developers.openai.com/api/docs/changelog) (no search/crawler entry in September 2026) · [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (read via Internet Archive raw mirror, snapshot 2026-09-18)
+- Perplexity — [Developer changelog](https://docs.perplexity.ai/changelog.md) (preset citation formats, July 2026) · [Sonar migration guide](https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview)
+- Microsoft — [Microsoft 365 roadmap API, item 523223](https://www.microsoft.com/releasecommunications/api/v1/m365?id=523223) · [Manage public web access in Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access) · [Which crawlers does Bing use?](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0) · [Message Center MC1247902 (community mirror)](https://mc.merill.net/message/MC1247902)
+- Google — [Generative AI performance report (Search)](https://support.google.com/webmasters/answer/16984139?hl=en) · [Generative AI performance report (Discover)](https://support.google.com/webmasters/answer/16983858?hl=en)
+- DuckDuckGo — [DuckAssistBot](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot)
+- SE Ranking — [AI Mode research (June 2025 sample)](https://seranking.com/blog/ai-mode-research/) · [Google links in AI Mode answers (Feb 2026 sample)](https://seranking.com/blog/google-links-in-ai-mode-answers/) — industry source
+- Comscore — [Q2 2026 AI Intelligence Report press release (comscore.com)](https://www.comscore.com/Insights/Press-Releases/2026/9/Comscores-Q2-2026-AI-Intelligence-Report) — industry source
 
 **Primary / official**
 

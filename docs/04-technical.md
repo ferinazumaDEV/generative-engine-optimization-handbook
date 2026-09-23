@@ -47,6 +47,8 @@ Different bots do different jobs, and you control them separately. The most cons
 
 > **Dated check (2026-09-21) — these lists move, and one moved this month.** Read from OpenAI's own endpoints: [`chatgpt-user.json`](https://openai.com/chatgpt-user.json) was regenerated on **2026-09-18** and now carries **219 prefixes**, against [`gptbot.json`](https://openai.com/gptbot.json) at **21** (2025-10-30), [`searchbot.json`](https://openai.com/searchbot.json) at **39** (2026-01-02) and `adsbot.json` at **2** (2026-05-12). Because `ChatGPT-User` is the fetcher OpenAI documents as one `robots.txt` "may not apply" to, **IP verification is the only reliable way to identify it** — and an allowlist built before 18 September is already incomplete. Useful operational note: OpenAI's `.json` endpoints serve automated clients normally even though `openai.com` HTML pages return HTTP 403 to them. By contrast, Perplexity's [`perplexitybot.json`](https://www.perplexity.ai/perplexitybot.json) still carries `"creationTime": "2025-02-07T16:56:00.000000"` — **nineteen months old**. Vendors publish these files at wildly different cadences, so if you verify by IP, check the age of the file you are verifying against.
 
+> **Dated check (2026-09-23) — re-read from the vendor pages.** OpenAI: `GPTBot/1.4`, `OAI-SearchBot/1.4`, `ChatGPT-User/1.0`, `OAI-AdsBot` unchanged ([OpenAI](https://developers.openai.com/api/docs/bots)). Anthropic: `ClaudeBot`, `Claude-User`, `Claude-SearchBot`, still no version numbers; `claude.com/crawling/bots.json` creationTime 2026-08-18, 26 prefixes ([Anthropic](https://support.claude.com/en/articles/8896518)). Perplexity: `perplexitybot.json` byte-identical on the `.com` and `.ai` hosts, creationTime 2025-02-07, eight prefixes; `perplexity-user.json` 2025-10-17 ([Perplexity](https://docs.perplexity.ai/guides/bots)). Meta: the `⚠️ verify` on `Meta-ExternalAgent` below is resolved — Meta's page lists five tokens at `/1.1`, says `Meta-ExternalAgent` crawls *"for training foundation AI models or improving products by indexing content directly"*, that `Meta-ExternalFetcher` may bypass robots.txt because it performs user-requested fetches, and that `facebookexternalhit` might bypass robots.txt for security or integrity checks ([Meta](https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers)). Google: `Google-Extended` still documented as not affecting Search inclusion or ranking (page stamp 2026-07-14) ([Google](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers)). Common Crawl: `CCBot/2.0` unchanged ([Common Crawl](https://commoncrawl.org/ccbot)). Bing additionally documents `MicrosoftPreview/2.0`, a snapshot fetcher for Microsoft products, absent from this table ([Bing](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0)). `Bytespider` remains unverified.
+
 | Bot (user-agent token) | Vendor | Purpose | Obeys `robots.txt`? | Official reference |
 |---|---|---|---|---|
 | `GPTBot` | OpenAI | **Train** foundation models | Yes | [OpenAI bots](https://developers.openai.com/api/docs/bots) · [gptbot.json](https://openai.com/gptbot.json) |
@@ -64,6 +66,7 @@ Different bots do different jobs, and you control them separately. The most cons
 | `Meta-ExternalAgent` | Meta | **Train / index** for Meta AI | Yes (claimed) | ⚠️ verify |
 | `Amazonbot` | Amazon | **Index** (Alexa / AI answers) | Yes | [Amazon](https://developer.amazon.com/amazonbot) |
 | `CCBot` | Common Crawl | **Crawl** open corpus widely reused for AI training | Yes | [Common Crawl](https://commoncrawl.org/ccbot) |
+| `DuckAssistBot` (added 2026-09-23) | DuckDuckGo | **User-triggered / real-time** fetch for cited AI answers; not used for training | Yes — disallow takes effect after 72 h, no effect on organic ranking | [DuckDuckGo](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot) (`DuckAssistBot/1.2`; IPs at `duckduckgo.com/duckassistbot.json`) |
 
 Notes and caveats:
 
@@ -181,6 +184,7 @@ The ad-hoc, per-vendor tokens (`GPTBot`, `Google-Extended`, `Applebot-Extended`,
 
 - **[`draft-ietf-aipref-vocab-07`](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/)** defines the preference *vocabulary* (`train-ai`, `search`). ⚠️ It carries a prominent note that its contents **do not yet reflect working-group consensus** — expect the terms to move.
 - **[`draft-ietf-aipref-attach-05`](https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/)** defines how to *attach* those preferences to content: a **`Content-Usage` HTTP response header** (a structured-field dictionary, e.g. `Content-Usage: train-ai=n`) and a parallel **`Content-Usage` rule inside `robots.txt`** (longest-prefix matching, like `Allow`/`Disallow`).
+- **Update (2026-09-23) — `vocab` moved to -08 and grew a third category.** [`draft-ietf-aipref-vocab-08`](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-08.html), published **14 Sep 2026**, defines **`train-ai`** (4.1), **`ai-use`** (4.2 — *"Using an asset as input to a generative AI model, where the asset is not directly provided by the user"*) and **`search`** (4.3); -07 had only training and search. It still carries the note that its contents do not reflect working-group consensus, and whether "directly provided" covers a URL the user pastes is an open issue in the draft. `draft-ietf-aipref-attach` stayed at -05 (19 Aug 2026), checked the same day. Adjacent, not a standard: Cloudflare's [Content Signals](https://contentsignals.org/) page documents a `Content-Signal: ai-train=no, search=yes, ai-input=no` robots.txt line with the same three-way split and says some automated systems may ignore it (vendor guide, undated).
 
 If AIPREF lands, it becomes the clean way to say *"you may crawl me for search/citation but not for training"* — per path — which today's split of training vs. search tokens only approximates. **It is a set of drafts, not a shipped standard;** check the datatracker pages before relying on it. `> ⚠️ pre-consensus / evolving — track the WG documents, don't hard-code the header yet.`
 
@@ -371,6 +375,14 @@ A pragmatic, ordered pass. Do the top items first — they have the highest leve
 ---
 
 ## Sources
+
+**Added 2026-09-23 (cluster review):**
+
+- IETF — [draft-ietf-aipref-vocab-08](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-08.html) (14 Sep 2026; work in progress)
+- Cloudflare — [Content Signals](https://contentsignals.org/) (vendor guide, undated)
+- DuckDuckGo — [DuckAssistBot](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot)
+- Meta — [Meta web crawlers](https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers)
+- Bing — [Which crawlers does Bing use?](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0)
 
 Primary / official:
 
