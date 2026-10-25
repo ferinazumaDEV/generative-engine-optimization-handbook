@@ -1,4 +1,4 @@
-<!-- synced-from: fb82536407ecf384a536d3d517dc364116bddd47 -->
+<!-- synced-from: aa84d7a725c816edaf93c5e9b8a6370aa6f8f060 -->
 
 # The GEO Handbook
 
@@ -99,7 +99,7 @@ El contenido está bajo **[Creative Commons Atribución-CompartirIgual 4.0 Inter
 
 ## Autor y mantenedor
 
-Creado y mantenido por Fernando Aporta Franco (ferinazumaDEV). Las aportaciones se acreditan a quien las hace; están en el changelog y en el historial de PRs. Si construyes sobre esto, se agradece la atribución a *«The GEO Handbook — Fernando Aporta Franco, CC BY-SA 4.0»*.
+Creado y mantenido por Fernando Aporta Franco (ferinazumaDEV). El método descrito aquí es el que aplica en su consultoría GEO en [zentimes.es](https://zentimes.es) (Madrid). Las aportaciones se acreditan a quien las hace; están en el changelog y en el historial de PRs. Si construyes sobre esto, se agradece la atribución a *«The GEO Handbook — Fernando Aporta Franco, CC BY-SA 4.0»*.
 
 ## Parte de un conjunto de trabajo abierto
 
