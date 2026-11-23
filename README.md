@@ -91,7 +91,7 @@ Content is licensed under **[Creative Commons Attribution‑ShareAlike 4.0 Inter
 
 ## Author & maintainer
 
-Created and maintained by Fernando Aporta Franco (ferinazumaDEV). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — Fernando Aporta Franco, CC BY‑SA 4.0"* is appreciated.
+Created and maintained by Fernando Aporta Franco (ferinazumaDEV). The method described here is the one applied in his GEO consulting practice at [zentimes.es](https://zentimes.es) (Madrid). Contributions are credited to their authors; see the changelog and PR history. If you build on this, attribution to *"The GEO Handbook — Fernando Aporta Franco, CC BY‑SA 4.0"* is appreciated.
 
 ## Part of a cluster of open work
 
